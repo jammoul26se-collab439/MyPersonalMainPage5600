@@ -1,14 +1,16 @@
 import { BrowserRouter , Routes , Route } from "react-router-dom";
-import { useEffect , useRef } from "react";
+import { useEffect , useRef , useState } from "react";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Games from "./pages/Games";
 import Books from "./pages/Books";
 import Articles from "./pages/Articles"
 import "./styles/App.css";
+import { setClickMuted } from "./util/playClick";
 
 function App() {
   const musicRef = useRef(null);
+  const [muted , setMuted] = useState(false);
   useEffect( () => {
     const startMusic = () => {
       if(musicRef.current) {
@@ -24,12 +26,18 @@ function App() {
       document.addEventListener("touchstart" , startMusic);
       document.addEventListener("keydown" , startMusic);
      }, []);
+     useEffect( () => {
+      if(musicRef.current) {
+        musicRef.current.muted = muted;
+      }
+      setClickMuted(muted);
+     } , [muted]);
   return(
     <BrowserRouter>
     <audio ref={musicRef} loop preload="auto">
       <source src="/mainmusic.mpeg" type="audio/mpeg" />
       </audio>
-    <Navbar />
+    <Navbar muted={muted} setMuted={setMuted} />
     <div className ="page-content">
     <Routes>
       <Route path = "/" element={<Home/>}/>

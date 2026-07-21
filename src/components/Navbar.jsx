@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState} from "react";
 import "../styles/Navbar.css";
 import { playClick } from "../util/playClick";
-function Navbar() {
+function Navbar({ muted , setMuted}) {
     const [open , setOpen] = useState(false);
  return(
     <>
@@ -20,6 +20,8 @@ function Navbar() {
     </nav>
     <div className = { open ? "sidebar active" : "sidebar"}>
         <button className = "close-btn" onClick={() => { playClick(); setOpen(false)}}>✕</button>
+        <button className = {muted? "sound-btn muted" : "sound-btn unmuted"} onClick={() => setMuted(!muted)}>Sound : {muted? "Muted" :"Not Muted"}</button>
+        <button className = "language-btn" onClick={playClick}>Languages</button>
     </div>
     </>
  );

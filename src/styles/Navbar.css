@@ -68,3 +68,43 @@ nav a:hover {
     cursor: pointer;
     margin: 15px;
 }
+
+.sound-btn {
+    width: 90%;
+    margin: 20px auto;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sound-btn.unmuted {
+    background-color: #16a34a;
+    color:white;
+}
+
+.sound-btn.muted {
+    background-color: #dc2626;
+    color:white;
+}
+
+.language-btn {
+    width: 90%;
+    margin: 20px auto;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #2563eb;
+    color: white;
+}
+
+.language-btn:hover {
+    background-color: #1d4ed8;
+}
