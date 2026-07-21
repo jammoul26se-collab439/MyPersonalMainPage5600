@@ -1,0 +1,14 @@
+body {
+    overflow-y: scroll;
+}
+.page-content {
+    background-image: url("/Earth.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 70px);
+}
+
+.page {
+    min-height : calc(100vh - 70px);
+}

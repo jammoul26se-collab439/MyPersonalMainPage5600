@@ -1,0 +1,97 @@
+.about {
+    text-align: left;
+    padding:0 0px 50px 0px;
+    margin-top: 0;
+}
+
+.about .section-title:first-child {
+    transform: translateY(10px);
+}
+
+.about pre {
+    margin-top: 20px;
+    white-space: pre-wrap;
+    font-size: 20px;
+    line-height: 1.8;
+    font-family: "Segoe UI" , sans-serif;
+    color: white;
+    margin: 0;
+}
+
+.social-links a:hover {
+    color: #111827;
+}
+
+.social-links {
+    display : flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    font-size: 16px;
+    font-family: "Segoe UI" , sans-serif;
+    color: #38bdf8;
+    text-decoration: underline;
+    line-height: 1.8;
+}
+
+.section-title {
+    display: inline-block;
+    font-size: 22px;
+    font-family: "Georgia" , serif;
+    background: #d8b4fe;
+    color: #08060d;
+    padding: 8px 18px;
+    border-radius: 8px;
+}
+
+.game-title {
+    display : inline-block;
+    font-size : 28px;
+    font-family: "Georgia" , serif;
+    background: #c19a6b;
+    color: #08060d;
+    padding: 8px 18px;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.game-card {
+    margin-bottom: 50px;
+}
+
+.game-card p {
+   margin-top: 20px;
+   margin-bottom: 25px;
+}
+
+.game-description {
+    font-size: 18px;
+    font-family: "Segoe UI" , sans-serif;
+    line-height: 1.8;
+    color: white;
+    max-width: 900px;
+}
+
+.game-button {
+    background-color: #0e172c;
+    color:white;
+    font-size: 15px;
+    font-family: "Segoe UI" , sans-serif;
+    padding: 12px 25px;
+    border: 1px solid #64748b;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.game-button:hover {
+    background-color: #1e293b;
+    border-color: #38bdf8;
+}
+
+
