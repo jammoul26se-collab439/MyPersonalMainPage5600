@@ -52,7 +52,7 @@ nav a:hover {
     width: 260px;
     height: 100vh;
     background-color: #111827;
-    transition: left 0.3 ease;
+    transition: left 0.3s ease;
     z-index: 1000;
 }
 
@@ -92,8 +92,7 @@ nav a:hover {
 }
 
 .language-btn {
-    width: 90%;
-    margin: 20px auto;
+    width: 100%;
     padding: 12px;
     border: none;
     border-radius: 8px;
@@ -102,9 +101,49 @@ nav a:hover {
     cursor: pointer;
     transition: 0.3s;
     background-color: #2563eb;
-    color: white;
+    color:white;
+    display: block;
 }
 
 .language-btn:hover {
     background-color: #1d4ed8;
 }
+
+.language-container {
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.language-menu {
+    position: absolute;
+    top: 0;
+    left: 105%;
+    display: flex;
+    flex-direction: column;
+    background: #1f2937;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 170px;
+}
+
+.language-menu button {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.language-menu button:hover {
+    background: #334155;
+}
+
+
+
+

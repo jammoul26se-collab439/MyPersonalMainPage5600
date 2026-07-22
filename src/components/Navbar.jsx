@@ -4,6 +4,7 @@ import "../styles/Navbar.css";
 import { playClick } from "../util/playClick";
 function Navbar({ muted , setMuted}) {
     const [open , setOpen] = useState(false);
+    const [showLanguages , setShowLanguages] = useState(false);
  return(
     <>
      <nav>
@@ -20,8 +21,21 @@ function Navbar({ muted , setMuted}) {
     </nav>
     <div className = { open ? "sidebar active" : "sidebar"}>
         <button className = "close-btn" onClick={() => { playClick(); setOpen(false)}}>✕</button>
-        <button className = {muted? "sound-btn muted" : "sound-btn unmuted"} onClick={() => setMuted(!muted)}>Sound : {muted? "Muted" :"Not Muted"}</button>
-        <button className = "language-btn" onClick={playClick}>Languages</button>
+        <button className = {muted? "sound-btn muted" : "sound-btn unmuted"} onClick={() => {  playClick(); setMuted(!muted); } } >Sound : {muted? "Muted" :"Not Muted"}</button>
+       <div className="language-container">
+        <button className="language-btn" onClick={() => {
+            playClick();
+            setShowLanguages(!showLanguages);
+        }}>Languages</button>
+        {showLanguages && (<div className="language-menu">
+            <button>English</button>
+            <button>Français</button>
+            <button>Español</button>
+            <button>Русский</button>
+            <button>اللغة العربية</button>
+            </div>
+            )}
+       </div>
     </div>
     </>
  );
