@@ -2,9 +2,25 @@ import { Link } from "react-router-dom";
 import { useState} from "react";
 import "../styles/Navbar.css";
 import { playClick } from "../util/playClick";
-function Navbar({ muted , setMuted}) {
+function Navbar({ muted , setMuted , language , setLanguage}) {
     const [open , setOpen] = useState(false);
     const [showLanguages , setShowLanguages] = useState(false);
+    const navText = {
+    en: {
+        home: "Home", games: "Games", books: "Books", articles: "Articles"
+    },
+    fr: {
+        home: "Accueil", games: "Jeux", books: "Livres", articles: "Articles"
+    },
+    es: {
+        home: "Inicio", games: "Juegos", books: "Libros", articles: "Artículos"
+    },
+    ru: { home: "Главная", games: "Игры", books: "Книги", articles: "Статьи"
+    },
+    ar: {
+        home: "الرئيسية", games: "الألعاب", books: "الكتب", articles: "المقالات"
+    }
+};
  return(
     <>
      <nav>
@@ -13,26 +29,28 @@ function Navbar({ muted , setMuted}) {
           <h2>It's Javad</h2>
         </div>
         <ul>
-            <li><Link to="/" onClick={playClick}>Home</Link></li>
-            <li><Link to="/games" onClick={playClick}>Games</Link></li>
-            <li><Link to="/books" onClick={playClick}>Books</Link></li>
-            <li><Link to="/articles" onClick={playClick}>Articles</Link></li>
+            <li><Link to="/" onClick={playClick}>{navText[language].home}</Link></li>
+            <li><Link to="/games" onClick={playClick}>{navText[language].games}</Link></li>
+            <li><Link to="/books" onClick={playClick}>{navText[language].books}</Link></li>
+            <li><Link to="/articles" onClick={playClick}>{navText[language].articles}</Link></li>
         </ul>
     </nav>
     <div className = { open ? "sidebar active" : "sidebar"}>
         <button className = "close-btn" onClick={() => { playClick(); setOpen(false)}}>✕</button>
-        <button className = {muted? "sound-btn muted" : "sound-btn unmuted"} onClick={() => {  playClick(); setMuted(!muted); } } >Sound : {muted? "Muted" :"Not Muted"}</button>
+        <div className="language-container">
+             <button className = {muted? "sound-btn muted" : "sound-btn unmuted"} onClick={() => {  playClick(); setMuted(!muted); } } >Sound : {muted? "Muted" :"Not Muted"}</button>
+        </div>
        <div className="language-container">
         <button className="language-btn" onClick={() => {
             playClick();
             setShowLanguages(!showLanguages);
         }}>Languages</button>
         {showLanguages && (<div className="language-menu">
-            <button>English</button>
-            <button>Français</button>
-            <button>Español</button>
-            <button>Русский</button>
-            <button>اللغة العربية</button>
+            <button onClick={() =>{ playClick(); setLanguage("en"); setShowLanguages(false); }}>English</button>
+            <button onClick={() =>{ playClick(); setLanguage("fr"); setShowLanguages(false); }}>Français</button>
+            <button onClick={() =>{ playClick(); setLanguage("es"); setShowLanguages(false); }} >Español</button>
+            <button onClick={() =>{ playClick(); setLanguage("ru"); setShowLanguages(false); }}>Русский</button>
+            <button onClick={() =>{ playClick(); setLanguage("ar"); setShowLanguages(false); }}>اللغة العربية</button>
             </div>
             )}
        </div>

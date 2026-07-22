@@ -11,6 +11,7 @@ import { setClickMuted } from "./util/playClick";
 function App() {
   const musicRef = useRef(null);
   const [muted , setMuted] = useState(false);
+  const [language , setLanguage] = useState("en");
   useEffect( () => {
     const startMusic = () => {
       if(musicRef.current) {
@@ -37,10 +38,10 @@ function App() {
     <audio ref={musicRef} loop preload="auto">
       <source src="/mainmusic.mpeg" type="audio/mpeg" />
       </audio>
-    <Navbar muted={muted} setMuted={setMuted} />
+    <Navbar muted={muted} setMuted={setMuted} language={language} setLanguage={setLanguage} />
     <div className ="page-content">
     <Routes>
-      <Route path = "/" element={<Home/>}/>
+      <Route path = "/" element={<Home language={language}/>}/>
       <Route path = "/games" element={<Games />} />
       <Route path = "/books" element={<Books />} />
       <Route path = "/articles" element = {<Articles />} />
