@@ -1,6 +1,6 @@
 import { playClick } from "../util/playClick";
 
-function Books({language}) {
+function Books({language , playMusic}) {
     const booksText = {
     en: {
         title: "My University's Books (Bachelor)",
@@ -35,6 +35,7 @@ function Books({language}) {
            <p className="game-description">{booksText[language].description}</p>
         <a href="https://universitysbachelorbooks6432.jammoul26se.workers.dev/"><button className = "game-button" onClick={(e) => {
            e.preventDefault();
+           playMusic();
            playClick();
            setTimeout( () => {
             window.location.href="https://universitysbachelorbooks6432.jammoul26se.workers.dev/";

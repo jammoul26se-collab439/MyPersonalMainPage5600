@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState} from "react";
 import "../styles/Navbar.css";
 import { playClick } from "../util/playClick";
-function Navbar({ muted , setMuted , language , setLanguage}) {
+function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
     const [open , setOpen] = useState(false);
     const [showLanguages , setShowLanguages] = useState(false);
     const sidebarText = {
@@ -57,21 +57,22 @@ function Navbar({ muted , setMuted , language , setLanguage}) {
         </ul>
     </nav>
     <div className = { open ? "sidebar active" : "sidebar"}>
-        <button className = "close-btn" onClick={() => { playClick(); setOpen(false)}}>✕</button>
+        <button className = "close-btn" onClick={() => { playMusic(); playClick(); setOpen(false)}}>✕</button>
         <div className="language-container">
-             <button className = {muted? "sound-btn muted" : "sound-btn unmuted"} onClick={() => {  playClick(); setMuted(!muted); } } >{sidebarText[language].sound} : {muted? sidebarText[language].muted : sidebarText[language].notMuted}</button>
+             <button className = {muted? "sound-btn muted" : "sound-btn unmuted"} onClick={() => {playMusic(); playClick(); setMuted(!muted); } } >{sidebarText[language].sound} : {muted? sidebarText[language].muted : sidebarText[language].notMuted}</button>
         </div>
        <div className="language-container">
         <button className="language-btn" onClick={() => {
+            playMusic();
             playClick();
             setShowLanguages(!showLanguages);
         }}>{sidebarText[language].languages}</button>
         {showLanguages && (<div className="language-menu">
-            <button onClick={() =>{ playClick(); setLanguage("en"); setShowLanguages(false); }}>English</button>
-            <button onClick={() =>{ playClick(); setLanguage("fr"); setShowLanguages(false); }}>Français</button>
-            <button onClick={() =>{ playClick(); setLanguage("es"); setShowLanguages(false); }} >Español</button>
-            <button onClick={() =>{ playClick(); setLanguage("ru"); setShowLanguages(false); }}>Русский</button>
-            <button onClick={() =>{ playClick(); setLanguage("ar"); setShowLanguages(false); }}>اللغة العربية</button>
+            <button onClick={() =>{playMusic(); playClick(); setLanguage("en"); setShowLanguages(false); }}>English</button>
+            <button onClick={() =>{playMusic(); playClick(); setLanguage("fr"); setShowLanguages(false); }}>Français</button>
+            <button onClick={() =>{playMusic(); playClick(); setLanguage("es"); setShowLanguages(false); }} >Español</button>
+            <button onClick={() =>{playMusic(); playClick(); setLanguage("ru"); setShowLanguages(false); }}>Русский</button>
+            <button onClick={() =>{playMusic(); playClick(); setLanguage("ar"); setShowLanguages(false); }}>اللغة العربية</button>
             </div>
             )}
        </div>

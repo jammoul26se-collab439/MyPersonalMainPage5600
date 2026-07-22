@@ -10,6 +10,11 @@ import { setClickMuted } from "./util/playClick";
 
 function App() {
   const musicRef = useRef(null);
+  const playMusic = () => {
+    if(musicRef.current) {
+      musicRef.current.play().catch( () => {});
+    }
+  };
   const [muted , setMuted] = useState(false);
   const [language , setLanguage] = useState("en");
   useEffect(() => {
@@ -44,13 +49,13 @@ function App() {
     <audio ref={musicRef} loop preload="auto">
       <source src="/mainmusic.mpeg" type="audio/mpeg" />
       </audio>
-    <Navbar muted={muted} setMuted={setMuted} language={language} setLanguage={setLanguage} />
+    <Navbar muted={muted} setMuted={setMuted} language={language} setLanguage={setLanguage} playMusic={playMusic} />
     <div className ="page-content">
     <Routes>
-      <Route path = "/" element={<Home language={language}/>}/>
-      <Route path = "/games" element={<Games language={language}/>} />
-      <Route path = "/books" element={<Books language={language}/>} />
-      <Route path = "/articles" element = {<Articles language={language} />} />
+      <Route path = "/" element={<Home language={language} playMusic={playMusic}/>}/>
+      <Route path = "/games" element={<Games language={language} playMusic={playMusic}/>} />
+      <Route path = "/books" element={<Books language={language} playMusic={playMusic}/>} />
+      <Route path = "/articles" element = {<Articles language={language} playMusic={playMusic}/>} />
     </Routes>
     </div>
     </BrowserRouter>

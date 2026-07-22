@@ -1,7 +1,7 @@
 import "../styles/Home.css";
 import { playClick } from "../util/playClick";
 
-function Home({ language }) {
+function Home({ language , playMusic }) {
   const homeText = {
     en: {
         about: "About Javad",
@@ -78,15 +78,16 @@ Disfruto creando proyectos reales, aprendiendo nuevas tecnologías, mejorando mi
    <div className="social-links">
      <a href="https://youtube.com/@itsjawad-j4x?si=9R0ggTnSpcKa9gGI" onClick={ (e) => {
       e.preventDefault();
+      playMusic();
       playClick();
       setTimeout(() => {
         window.location.href="https://youtube.com/@itsjawad-j4x?si=9R0ggTnSpcKa9gGI";
       }, 150);
       }}>{homeText[language].youtube}</a> 
      <a href="https://www.facebook.com/share/1UhfgXzhps/" onClick={playClick}>{homeText[language].facebook}</a> 
-     <a href="https://www.instagram.com/itsjavad5320?igsh=MXB5cnhmemRyZGZzYQ==" onClick={playClick}>{homeText[language].instagram}</a> 
-     <a href = "https://www.tiktok.com/@itsjavad135286?_r=1&_t=ZS-98CDjISN7Qa" onClick={playClick}>{homeText[language].tiktok}</a> 
-     <a href = "https://whatsapp.com/channel/0029VbD8tq4B4hdYQMrKZ83G" onClick={playClick}>{homeText[language].whatsapp}</a>
+     <a href="https://www.instagram.com/itsjavad5320?igsh=MXB5cnhmemRyZGZzYQ==" onClick={() => { playMusic(); playClick(); }}>{homeText[language].instagram}</a> 
+     <a href = "https://www.tiktok.com/@itsjavad135286?_r=1&_t=ZS-98CDjISN7Qa" onClick={() => { playMusic(); playClick();}}>{homeText[language].tiktok}</a> 
+     <a href = "https://whatsapp.com/channel/0029VbD8tq4B4hdYQMrKZ83G" onClick={() => {playMusic(); playClick(); }}>{homeText[language].whatsapp}</a>
      </div>
    </div>
       </div>
