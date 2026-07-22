@@ -12,21 +12,27 @@ function App() {
   const musicRef = useRef(null);
   const [muted , setMuted] = useState(false);
   const [language , setLanguage] = useState("en");
-  useEffect( () => {
-    const startMusic = () => {
-      if(musicRef.current) {
-        musicRef.current.play().catch( (error) => {
-          console.log(error);
-        });
-      }
-      document.removeEventListener("click" , startMusic);
-      document.removeEventListener("touchstart" , startMusic);
-      document.removeEventListener("keydown" , startMusic);
+  useEffect(() => {
+  const startMusic = () => {
+    if (musicRef.current) {
+      musicRef.current.play().catch((err) => console.log(err));
     }
-      document.addEventListener("click" , startMusic);
-      document.addEventListener("touchstart" , startMusic);
-      document.addEventListener("keydown" , startMusic);
-     }, []);
+    window.removeEventListener("touchstart", startMusic);
+    window.removeEventListener("pointerdown", startMusic);
+    window.removeEventListener("click", startMusic);
+    window.removeEventListener("keydown", startMusic);
+  };
+  window.addEventListener("touchstart", startMusic, { once: true });
+  window.addEventListener("pointerdown", startMusic, { once: true });
+  window.addEventListener("click", startMusic, { once: true });
+  window.addEventListener("keydown", startMusic, { once: true });
+  return () => {
+    window.removeEventListener("touchstart", startMusic);
+    window.removeEventListener("pointerdown", startMusic);
+    window.removeEventListener("click", startMusic);
+    window.removeEventListener("keydown", startMusic);
+  };
+}, []);
      useEffect( () => {
       if(musicRef.current) {
         musicRef.current.muted = muted;
