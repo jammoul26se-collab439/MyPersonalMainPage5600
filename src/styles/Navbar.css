@@ -156,6 +156,7 @@ nav a:hover {
     }
     nav h2 {
         font-size: 18px;
+        margin-right: 18px;
     }
     nav ul {
         display: flex;
@@ -168,6 +169,8 @@ nav a:hover {
     }
     .menu-btn {
         font-size: 24px;
+        display: block;
+        margin-right: 10px;
     }
     .sidebar {
         width: 240px;
