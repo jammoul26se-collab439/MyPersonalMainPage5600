@@ -42,9 +42,9 @@ function App() {
     <div className ="page-content">
     <Routes>
       <Route path = "/" element={<Home language={language}/>}/>
-      <Route path = "/games" element={<Games />} />
-      <Route path = "/books" element={<Books />} />
-      <Route path = "/articles" element = {<Articles />} />
+      <Route path = "/games" element={<Games language={language}/>} />
+      <Route path = "/books" element={<Books language={language}/>} />
+      <Route path = "/articles" element = {<Articles language={language} />} />
     </Routes>
     </div>
     </BrowserRouter>
