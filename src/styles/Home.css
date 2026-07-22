@@ -99,15 +99,15 @@
         padding: 15px;
     }
     .section-title {
-        font-size: 18px;
+        font-size: 20px;
         padding: 6px 14px;
     }
     .game-title {
-        font-size: 22px;
+        font-size: 24px;
         padding: 6px 14px;
     }
     .game-description , .about pre {
-        font-size: 16px;
+        font-size: 17px;
         line-height: 1.6;
     }
     .social-links a {
@@ -116,7 +116,7 @@
     .game-button {
         width: 100%;
         max-width:320px;
-        font-size: 16px;
+        font-size: 14px;
         padding: 14px;
     }
     .game-card {
