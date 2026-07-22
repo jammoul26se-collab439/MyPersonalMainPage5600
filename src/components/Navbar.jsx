@@ -5,6 +5,27 @@ import { playClick } from "../util/playClick";
 function Navbar({ muted , setMuted , language , setLanguage}) {
     const [open , setOpen] = useState(false);
     const [showLanguages , setShowLanguages] = useState(false);
+    const sidebarText = {
+    en: {
+        sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages"
+    },
+
+    fr: {
+        sound: "Son", muted: "Muet", notMuted: "Activé", languages: "Langues"
+    },
+
+    es: {
+        sound: "Sonido", muted: "Silenciado", notMuted: "Activado", languages: "Idiomas"
+    },
+
+    ru: {
+        sound: "Звук", muted: "Выключен", notMuted: "Включен", languages: "Языки"
+    },
+
+    ar: {
+        sound: "الصوت", muted: "مكتوم", notMuted: "غير مكتوم", languages: "اللغات"
+    }
+};
     const navText = {
     en: {
         home: "Home", games: "Games", books: "Books", articles: "Articles"
@@ -38,13 +59,13 @@ function Navbar({ muted , setMuted , language , setLanguage}) {
     <div className = { open ? "sidebar active" : "sidebar"}>
         <button className = "close-btn" onClick={() => { playClick(); setOpen(false)}}>✕</button>
         <div className="language-container">
-             <button className = {muted? "sound-btn muted" : "sound-btn unmuted"} onClick={() => {  playClick(); setMuted(!muted); } } >Sound : {muted? "Muted" :"Not Muted"}</button>
+             <button className = {muted? "sound-btn muted" : "sound-btn unmuted"} onClick={() => {  playClick(); setMuted(!muted); } } >{sidebarText[language].sound} : {muted? sidebarText[language].muted : sidebarText[language].notMuted}</button>
         </div>
        <div className="language-container">
         <button className="language-btn" onClick={() => {
             playClick();
             setShowLanguages(!showLanguages);
-        }}>Languages</button>
+        }}>{sidebarText[language].languages}</button>
         {showLanguages && (<div className="language-menu">
             <button onClick={() =>{ playClick(); setLanguage("en"); setShowLanguages(false); }}>English</button>
             <button onClick={() =>{ playClick(); setLanguage("fr"); setShowLanguages(false); }}>Français</button>

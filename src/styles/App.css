@@ -12,3 +12,13 @@ body {
 .page {
     min-height : calc(100vh - 70px);
 }
+
+@media (max-width: 768px) {
+    .page-content {
+        min-height: calc(100vh-60px);
+    }
+    .page {
+        padding: 15px;
+        min-height: calc(100vh-60px);
+    }
+}

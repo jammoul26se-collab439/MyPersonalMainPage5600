@@ -143,5 +143,27 @@ nav a:hover {
 }
 
 
+@media(max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+    }
+    nav h2 {
+        font-size: 20px;
+    }
+    nav ul {
+        display: none;
+    }
+    .menu-btn {
+        font-size: 34px;
+    }
+    .sidebar {
+        width: 240px;
+    }
+    .language-menu {
+        left: 100%;
+        min-width: 150px;
+    }
 
+
+}
 
