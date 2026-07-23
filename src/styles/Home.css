@@ -1,6 +1,6 @@
 .about {
     text-align: left;
-    padding:0 0px 50px 0px;
+    padding: 0 0px 50px 0px;
     margin-top: 0;
 }
 
@@ -96,7 +96,7 @@
 
 @media(max-width: 768px) {
     .about {
-        padding: 15px;
+        padding: 4px 15px 15px 15px;
     }
     .section-title {
         font-size: 20px;
