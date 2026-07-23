@@ -50,10 +50,10 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
           <h2>It's Javad</h2>
         </div>
         <ul>
-            <li><Link to="/" onClick={playClick}>{navText[language].home}</Link></li>
-            <li><Link to="/games" onClick={playClick}>{navText[language].games}</Link></li>
-            <li><Link to="/books" onClick={playClick}>{navText[language].books}</Link></li>
-            <li><Link to="/articles" onClick={playClick}>{navText[language].articles}</Link></li>
+            <li><Link to="/" onClick={() => {playMusic(); playClick();}}>{navText[language].home}</Link></li>
+            <li><Link to="/games" onClick={() => {playMusic(); playClick();}}>{navText[language].games}</Link></li>
+            <li><Link to="/books" onClick={() => {playMusic(); playClick();}}>{navText[language].books}</Link></li>
+            <li><Link to="/articles" onClick={() => {playMusic(); playClick();}}>{navText[language].articles}</Link></li>
         </ul>
     </nav>
     <div className = { open ? "sidebar active" : "sidebar"}>
