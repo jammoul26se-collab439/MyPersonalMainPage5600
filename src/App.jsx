@@ -44,7 +44,16 @@ function App() {
       }
       setClickMuted(muted);
      } , [muted]);
-  return(
+
+    useEffect(() => {
+      if(window.innerWidth<=768 && !localStorage.getItem("mobileAlertShown")) {
+        alert(
+          "For the best experience, the laptop version is recommended for better layout and controls.\n\nTap any button to start the music."
+        );
+        localStorage.setItem("mobileAlertShown" , "true");
+      }
+    } , []);
+     return(
     <BrowserRouter>
     <audio ref={musicRef} loop preload="auto">
       <source src="/mainmusic.mpeg" type="audio/mpeg" />

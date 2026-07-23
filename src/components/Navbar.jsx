@@ -46,7 +46,7 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
     <>
      <nav>
         <div className = "nav-left">
-          <button className="menu-btn" onPointerDown={() => {alert("menu"); playMusic(); playClick(); }} onClick={() => { setOpen(true)}}> ≡ </button>
+          <button className="menu-btn" onPointerDown={() => { playMusic(); playClick(); }} onClick={() => { setOpen(true)}}> ≡ </button>
           <h2>It's Javad</h2>
         </div>
         <ul>
