@@ -97,7 +97,7 @@
 @media(max-width: 768px) {
     .about {
         padding: 0 8px 15px 0px;
-        margin-top: -25px;
+        margin-top: -10px;
     }
     .section-title {
         font-size: 20px;
