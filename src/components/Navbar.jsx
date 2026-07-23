@@ -46,7 +46,7 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
     <>
      <nav>
         <div className = "nav-left">
-          <button className = "menu-btn" onClick={() => { playClick(); setOpen(true); }}> ≡ </button>
+          <button className = "menu-btn" onClick={() => { playClick();  playClick(); setOpen(true);}}> ≡ </button>
           <h2>It's Javad</h2>
         </div>
         <ul>
@@ -57,7 +57,7 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
         </ul>
     </nav>
     <div className = { open ? "sidebar active" : "sidebar"}>
-        <button className = "close-btn" onClick={() => { playMusic(); playClick(); setOpen(false)}}>✕</button>
+        <button className = "close-btn" onClick={() => { playMusic();  playClick(); setOpen(false);}}>✕</button>
         <div className="language-container">
              <button className = {muted? "sound-btn muted" : "sound-btn unmuted"} onClick={() => {playMusic(); playClick(); setMuted(!muted); } } >{sidebarText[language].sound} : {muted? sidebarText[language].muted : sidebarText[language].notMuted}</button>
         </div>
