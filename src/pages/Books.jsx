@@ -34,7 +34,7 @@ function Books({language , playMusic}) {
         <div className="page">
            <h1 className="section-title1">{booksText[language].title}</h1>
            <p className="game-description1">{booksText[language].description}</p>
-        <a href="https://universitysbachelorbooks6432.jammoul26se.workers.dev/"><button className = "game-button" onClick={(e) => {
+        <a href="https://universitysbachelorbooks6432.jammoul26se.workers.dev/"><button className = "books-button" onClick={(e) => {
            e.preventDefault();
            playMusic();
            playClick();

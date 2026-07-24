@@ -17,6 +17,22 @@
     max-width: 900px;
 }
 
+.books-button {
+    background-color: #0e172c;
+    color: white;
+    font-size: 15px;
+    font-family: "Segoe UI", sans-serif;
+    padding: 12px 25px;
+    border: 1px solid #64748b;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.books-button:hover {
+    background-color: #1e293b;
+    border-color: #38bdf8;
+}
 
 @media (max-width: 768px) {
 .section-title1 {
@@ -27,4 +43,10 @@
         font-size: 17px;
         line-height: 1.6;
     }
+.books-button {
+    width: 100%;
+    max-width: 320px;
+    font-size: 14px;
+    padding: 14px;
+}
 }
