@@ -7,23 +7,24 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
     const [showLanguages , setShowLanguages] = useState(false);
     const sidebarText = {
     en: {
-        sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages"
+        sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages" , options: "Options"
     },
 
     fr: {
-        sound: "Son", muted: "Muet", notMuted: "Activé", languages: "Langues"
+        sound: "Son", muted: "Muet", notMuted: "Activé", languages: "Langues" , options : "Options"
     },
 
     es: {
-        sound: "Sonido", muted: "Silenciado", notMuted: "Activado", languages: "Idiomas"
+        sound: "Sonido", muted: "Silenciado", notMuted: "Activado", languages: "Idiomas" , options: "Opciones"
     },
 
     ru: {
-        sound: "Звук", muted: "Выключен", notMuted: "Включен", languages: "Языки"
+        sound: "Звук", muted: "Выключен", notMuted: "Включен", languages: "Языки" , options: "Настройки"
+
     },
 
     ar: {
-        sound: "الصوت", muted: "مكتوم", notMuted: "غير مكتوم", languages: "اللغات"
+        sound: "الصوت", muted: "مكتوم", notMuted: "غير مكتوم", languages: "اللغات" , options: "الإعدادات"
     }
 };
     const navText = {
@@ -58,7 +59,7 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
     </nav>
     <div className = { open ? "sidebar active" : "sidebar"}>
         <button className = "close-btn" onClick={() => { playMusic();  playClick(); setOpen(false);}}>✕</button>
-        <h3 className = "sidebar-title">Options</h3>
+        <h3 className = "sidebar-title">{sidebarText[language].options}</h3>
         <div className="language-container">
              <button className = {muted? "sound-btn muted" : "sound-btn unmuted"} onClick={() => {playMusic(); playClick(); setMuted(!muted); } } >{sidebarText[language].sound} : {muted? sidebarText[language].muted : sidebarText[language].notMuted}</button>
         </div>
