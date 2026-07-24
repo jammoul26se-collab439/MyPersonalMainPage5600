@@ -174,8 +174,8 @@ nav a:hover {
         margin-right: 10px;
     }
     .sidebar {
-        width:280px;
-        left: -280px;
+        width: 65%;
+        left: -65%;
     }
     .sidebar .active {
         left: 0;
