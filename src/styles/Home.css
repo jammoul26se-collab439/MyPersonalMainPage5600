@@ -48,28 +48,6 @@
     border-radius: 8px;
 }
 
-/*.game-title {
-    display : inline-block;
-    font-size : 28px;
-    font-family: "Georgia" , serif;
-    background: #c19a6b;
-    color: #08060d;
-    padding: 8px 18px;
-    border-radius: 8px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-.game-card {
-    margin-bottom: 50px;
-}
-
-.game-card p {
-   margin-top: 20px;
-   margin-bottom: 25px;
-}
-*/
-
 .game-description {
     font-size: 18px;
     font-family: "Segoe UI" , sans-serif;
@@ -78,24 +56,6 @@
     max-width: 900px;
 }
 
-/*
-.game-button {
-    background-color: #0e172c;
-    color:white;
-    font-size: 15px;
-    font-family: "Segoe UI" , sans-serif;
-    padding: 12px 25px;
-    border: 1px solid #64748b;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.game-button:hover {
-    background-color: #1e293b;
-    border-color: #38bdf8;
-}
-*/
 
 @media(max-width: 768px) {
     .about {

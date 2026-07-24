@@ -1,4 +1,4 @@
-import "../styles/Home.css";
+import "../styles/Articles.css";
 function Articles( {language}) {
   const articlesText = {
     en: {
@@ -20,7 +20,7 @@ function Articles( {language}) {
     return (
       <>
         <h2 className="section-title">{articlesText[language].title}</h2>
-        <p className="game-description">{articlesText[language].description}</p>
+        <p className="articles-description">{articlesText[language].description}</p>
       </>
     );
 }

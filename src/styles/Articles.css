@@ -1,0 +1,28 @@
+.articles-description {
+    margin-top: -10px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.section-title {
+    display: inline-block;
+    font-size: 22px;
+    font-family: "Georgia" , serif;
+    background: #d8b4fe;
+    color: #08060d;
+    padding: 8px 18px;
+    border-radius: 8px;
+}
+
+@media(max-width: 768px) {
+    .articles-description {
+        margin-top: -10px;
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+     .section-title {
+        font-size: 20px;
+        padding: 6px 14px;
+    }
+}
