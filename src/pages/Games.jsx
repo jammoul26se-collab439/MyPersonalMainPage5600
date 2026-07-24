@@ -1,4 +1,4 @@
-import "../styles/Home.css";
+import "../styles/Games.css";
 import { playClick } from "../util/playClick";
 
 function Games({language , playMusic}) {
