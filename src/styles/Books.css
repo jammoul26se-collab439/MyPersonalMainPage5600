@@ -42,11 +42,12 @@
 .game-description1 {
         font-size: 17px;
         line-height: 1.6;
+        margin-top: -10px;
     }
 .books-button {
-    width: 100%;
-    max-width: 320px;
-    font-size: 14px;
-    padding: 14px;
+    width: 85%;
+    max-width: 250px;
+    font-size: 13px;
+    padding: 10px 16px;
 }
 }
