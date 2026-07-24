@@ -58,6 +58,7 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
     </nav>
     <div className = { open ? "sidebar active" : "sidebar"}>
         <button className = "close-btn" onClick={() => { playMusic();  playClick(); setOpen(false);}}>✕</button>
+        <h3 className = "sidebar-title">Options</h3>
         <div className="language-container">
              <button className = {muted? "sound-btn muted" : "sound-btn unmuted"} onClick={() => {playMusic(); playClick(); setMuted(!muted); } } >{sidebarText[language].sound} : {muted? sidebarText[language].muted : sidebarText[language].notMuted}</button>
         </div>

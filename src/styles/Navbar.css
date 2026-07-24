@@ -69,14 +69,17 @@ nav a:hover {
     margin: 15px;
 }
 
-.sound-btn {
-    padding: 12px;
+.sound-btn , .language-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
     border: none;
     border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    background: #1e3a8a;
+    color: white;
 }
 
 .sound-btn.unmuted {
@@ -89,18 +92,8 @@ nav a:hover {
     color:white;
 }
 
-.language-btn {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-    background-color: #2563eb;
-    color:white;
-    display: block;
+.sound-btn:hover , .language-btn:hover {
+    background: #1d4ed8;
 }
 
 .language-btn:hover {
@@ -142,6 +135,14 @@ nav a:hover {
     background: #334155;
 }
 
+.sidebar-title {
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px 0 25px;
+}
+
 @media (max-width: 768px) {
     nav {
         padding: 10px 14px;
@@ -173,11 +174,21 @@ nav a:hover {
         margin-right: 10px;
     }
     .sidebar {
-        width: 240px;
+        text-align:center;
+        width: 100%;
     }
     .language-menu {
         left: 100%;
         min-width: 150px;
+    }
+    .sidebar-title {
+        font-size: 18px;
+        margin: 5px 0 18px;
+    }
+    .sound-btn , .language-btn {
+        padding: 8px;
+        font-size: 13px;
+        border-radius: 6px;
     }
 }
 
