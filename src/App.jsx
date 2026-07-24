@@ -56,7 +56,7 @@ function App() {
      return(
     <BrowserRouter>
     <audio ref={musicRef} loop preload="auto">
-      <source src="/mainmusic.mpeg" type="audio/mpeg" />
+      <source src="/mainmusic.mp4" type="audio/mp4" />
       </audio>
     <Navbar muted={muted} setMuted={setMuted} language={language} setLanguage={setLanguage} playMusic={playMusic} />
     <div className ="page-content">
