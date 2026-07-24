@@ -1,3 +1,4 @@
+import "../styles/Home.css";
 import { playClick } from "../util/playClick";
 
 function Books({language , playMusic}) {

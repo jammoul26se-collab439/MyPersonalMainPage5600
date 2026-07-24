@@ -1,3 +1,4 @@
+import "../styles/Home.css";
 function Articles( {language}) {
   const articlesText = {
     en: {
