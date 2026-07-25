@@ -90,7 +90,7 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
                           <h2>About</h2>
                           <p> <strong>Owner & Programmer of the Site:</strong><br /> Jawad Jammoul :) </p>
                           <p> <strong>Music Owner:</strong><br />
-                           <a href="https://youtube.com" target="_blank" rel="noreferrer">YouTube Link</a> </p>
+                           <a href="https://youtu.be/_ZKliUdu4T0?si=Z-L72HqcNE99SGS8" target="_blank" rel="noreferrer">Riyandi Kusuma</a> </p>
                            <button className="close-about-btn" onClick={ () => { playMusic(); playClick(); setShowAbout(false); }}> Close </button>
                            </div> 
                               </div>

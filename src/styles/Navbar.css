@@ -170,8 +170,8 @@ nav a:hover {
     z-index: 2000;
 }
 .about-modal {
-    width: 420px;
-    width: 90%;
+    width: 320px;
+    width: 85%;
     background-color: #111827;
     color:white;
     border: 2px solid #374151;
