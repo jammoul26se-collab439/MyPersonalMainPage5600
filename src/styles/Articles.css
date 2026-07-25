@@ -2,6 +2,7 @@
     margin-top: -10px;
     font-size: 18px;
     line-height: 1.6;
+    color:black;
 }
 
 .section-title {
@@ -9,7 +10,7 @@
     font-size: 22px;
     font-family: "Georgia" , serif;
     background: #d8b4fe;
-    color: #08060d;
+    color: black;
     padding: 8px 18px;
     border-radius: 8px;
 }
