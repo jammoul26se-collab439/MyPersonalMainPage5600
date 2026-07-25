@@ -5,26 +5,30 @@ import { playClick } from "../util/playClick";
 function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
     const [open , setOpen] = useState(false);
     const [showLanguages , setShowLanguages] = useState(false);
+    const [ showAbout , setShowAbout ] = useState(false);
     const sidebarText = {
     en: {
-        sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages" , options: "Options"
+        sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages" , options: "Options" , about: "About"
     },
 
     fr: {
-        sound: "Son", muted: "Muet", notMuted: "Activé", languages: "Langues" , options : "Options"
+        sound: "Son", muted: "Muet", notMuted: "Activé", languages: "Langues" , options : "Options" , about: "À propos"
+
     },
 
     es: {
-        sound: "Sonido", muted: "Silenciado", notMuted: "Activado", languages: "Idiomas" , options: "Opciones"
+        sound: "Sonido", muted: "Silenciado", notMuted: "Activado", languages: "Idiomas" , options: "Opciones" , about: "Acerca de"
+
     },
 
     ru: {
-        sound: "Звук", muted: "Выключен", notMuted: "Включен", languages: "Языки" , options: "Настройки"
+        sound: "Звук", muted: "Выключен", notMuted: "Включен", languages: "Языки" , options: "Настройки" , about: "О сайте"
+
 
     },
 
     ar: {
-        sound: "الصوت", muted: "مكتوم", notMuted: "غير مكتوم", languages: "اللغات" , options: "الإعدادات"
+        sound: "الصوت", muted: "مكتوم", notMuted: "غير مكتوم", languages: "اللغات" , options: "الإعدادات" , about: "حول الموقع"
     }
 };
     const navText = {
@@ -78,7 +82,20 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
             </div>
             )}
        </div>
+       <div className = "language-container">
+        <button className="about-btn" onClick={ () => {  playMusic(); playClick(); setShowAbout(true);  }}> {sidebarText[language].about} </button>
     </div>
+    {
+        showAbout && ( <div className="about-overlay"> <div className="about-modal">
+                          <h2>About</h2>
+                          <p> <strong>Owner & Programmer of the Site:</strong><br /> Jawad Jammoul :) </p>
+                          <p> <strong>Music Owner:</strong><br />
+                           <a href="https://youtube.com" target="_blank" rel="noreferrer">YouTube Link</a> </p>
+                           <button className="close-about-btn" onClick={ () => { playMusic(); playClick(); setShowAbout(false); }}> Close </button>
+                           </div> 
+                              </div>
+                          )}
+                          </div>
     </>
  );
 }

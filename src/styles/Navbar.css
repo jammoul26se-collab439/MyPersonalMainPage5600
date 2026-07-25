@@ -143,6 +143,57 @@ nav a:hover {
     margin: 5px 0 25px;
 }
 
+.about-btn {
+    width:100%;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+    background: #d81b60;
+    color:white;
+}
+
+.about-btn:hover {
+    background:#c2185b;
+}
+
+.about-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.about-modal a{
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.about-modal a:hover {
+    text-decoration:underline;
+}
+
+.close-about-btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border:none;
+    border-radius: 8px;
+    background: #dc2626;
+    color:white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.close-about-btn:hover {
+    background: #b91c1c;
+}
+
 @media (max-width: 768px) {
     nav {
         padding: 10px 14px;
