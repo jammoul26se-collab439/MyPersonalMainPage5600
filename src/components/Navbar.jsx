@@ -55,17 +55,17 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
           <h2>It's Javad</h2>
         </div>
         <ul>
-            <li><Link to="/" onClick={() => {playMusic(); playClick();}}>{navText[language].home}</Link></li>
-            <li><Link to="/games" onClick={() => {playMusic(); playClick();}}>{navText[language].games}</Link></li>
-            <li><Link to="/books" onClick={() => {playMusic(); playClick();}}>{navText[language].books}</Link></li>
-            <li><Link to="/articles" onClick={() => {playMusic(); playClick();}}>{navText[language].articles}</Link></li>
+            <li><Link to="/" onClick={() => {playMusic(); playClick(); setShowLanguages(false); setOpen(false); }}>{navText[language].home}</Link></li>
+            <li><Link to="/games" onClick={() => {playMusic(); playClick(); setShowLanguages(false); setOpen(false); }}>{navText[language].games}</Link></li>
+            <li><Link to="/books" onClick={() => {playMusic(); playClick(); setShowLanguages(false); setOpen(false); }}>{navText[language].books}</Link></li>
+            <li><Link to="/articles" onClick={() => {playMusic(); playClick(); setShowLanguages(false); setOpen(false); }}>{navText[language].articles}</Link></li>
         </ul>
     </nav>
     <div className = { open ? "sidebar active" : "sidebar"}>
-        <button className = "close-btn" onClick={() => { playMusic();  playClick(); setOpen(false);}}>✕</button>
+        <button className = "close-btn" onClick={() => { playMusic();  playClick(); setShowLanguages(false); setOpen(false);}}>✕</button>
         <h3 className = "sidebar-title">{sidebarText[language].options}</h3>
         <div className="language-container">
-             <button className = {muted? "sound-btn muted" : "sound-btn unmuted"} onClick={() => {playMusic(); playClick(); setMuted(!muted); } } >{sidebarText[language].sound} : {muted? sidebarText[language].muted : sidebarText[language].notMuted}</button>
+             <button className = {muted? "sound-btn muted" : "sound-btn unmuted"} onClick={() => {playMusic(); playClick(); setShowLanguages(false);  setMuted(!muted); } } >{sidebarText[language].sound} : {muted? sidebarText[language].muted : sidebarText[language].notMuted}</button>
         </div>
        <div className="language-container">
         <button className="language-btn" onClick={() => {
@@ -83,7 +83,7 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
             )}
        </div>
        <div className = "language-container">
-        <button className="about-btn" onClick={ () => {  playMusic(); playClick(); setShowAbout(true);  }}> {sidebarText[language].about} </button>
+        <button className="about-btn" onClick={ () => {  playMusic(); playClick(); setShowLanguages(false); setShowAbout(true);  }}> {sidebarText[language].about} </button>
     </div>
     {
         showAbout && ( <div className="about-overlay"> <div className="about-modal">
