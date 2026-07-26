@@ -156,6 +156,23 @@ nav a:hover {
     color:white;
 }
 
+.news-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+    background: #2563eb;
+    color: white;
+}
+
+.news-btn:hover{
+    background: #1d4ed8;
+}
+
 .about-btn:hover {
     background:#c2185b;
 }

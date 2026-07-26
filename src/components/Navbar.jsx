@@ -8,43 +8,51 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
     const [ showAbout , setShowAbout ] = useState(false);
     const sidebarText = {
     en: {
-        sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages" , options: "Options" , about: "About"
+        sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages" , options: "Options" , about: "About" , news: "News"
+    
     },
 
     fr: {
-        sound: "Son", muted: "Muet", notMuted: "Activé", languages: "Langues" , options : "Options" , about: "À propos"
+        sound: "Son", muted: "Muet", notMuted: "Activé", languages: "Langues" , options : "Options" , about: "À propos" , news: "Actualités"
+
 
     },
 
     es: {
-        sound: "Sonido", muted: "Silenciado", notMuted: "Activado", languages: "Idiomas" , options: "Opciones" , about: "Acerca de"
+        sound: "Sonido", muted: "Silenciado", notMuted: "Activado", languages: "Idiomas" , options: "Opciones" , about: "Acerca de" , news: "Noticias"
+
 
     },
 
     ru: {
-        sound: "Звук", muted: "Выключен", notMuted: "Включен", languages: "Языки" , options: "Настройки" , about: "О сайте"
+        sound: "Звук", muted: "Выключен", notMuted: "Включен", languages: "Языки" , options: "Настройки" , about: "О сайте" , news: "Новости"
+
 
 
     },
 
     ar: {
-        sound: "الصوت", muted: "مكتوم", notMuted: "غير مكتوم", languages: "اللغات" , options: "الإعدادات" , about: "حول الموقع"
+        sound: "الصوت", muted: "مكتوم", notMuted: "غير مكتوم", languages: "اللغات" , options: "الإعدادات" , about: "حول الموقع" , news: "الأخبار"
     }
 };
     const navText = {
     en: {
-        home: "Home", games: "Games", books: "Books", articles: "Articles"
+        home: "Home", games: "Games", books: "Books", articles: "Articles" , news: "News"
+
     },
     fr: {
-        home: "Accueil", games: "Jeux", books: "Livres", articles: "Articles"
+        home: "Accueil", games: "Jeux", books: "Livres", articles: "Articles" , news: "Actualités"
+
     },
     es: {
-        home: "Inicio", games: "Juegos", books: "Libros", articles: "Artículos"
+        home: "Inicio", games: "Juegos", books: "Libros", articles: "Artículos" , news: "Noticias"
+
     },
-    ru: { home: "Главная", games: "Игры", books: "Книги", articles: "Статьи"
+    ru: { home: "Главная", games: "Игры", books: "Книги", articles: "Статьи" , news: "Новости"
+
     },
     ar: {
-        home: "الرئيسية", games: "الألعاب", books: "الكتب", articles: "المقالات"
+        home: "الرئيسية", games: "الألعاب", books: "الكتب", articles: "المقالات" , news: "الأخبار"
     }
 };
  return(
@@ -82,6 +90,9 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
             </div>
             )}
        </div>
+       <div className = "language-container">
+        <button className="news-btn" onClick={ () => {playMusic(); playClick(); setShowLanguages(false); window.location.href="/News.html"}}>{sidebarText[language].news}</button>     
+       </div>     
        <div className = "language-container">
         <button className="about-btn" onClick={ () => {  playMusic(); playClick(); setShowLanguages(false); setShowAbout(true);  }}> {sidebarText[language].about} </button>
     </div>
