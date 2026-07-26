@@ -1,7 +1,7 @@
 import "../styles/Games.css";
 import { playClick } from "../util/playClick";
 
-function Games({language , playMusic}) {
+function Games({language , playMusic , stopMusic}) {
     const gamesText = {
     en: {
         title: "My Games",
@@ -99,12 +99,12 @@ ar: {
         <div className = "game-card">
             <h2 className = "game-title">{gamesText[language].ticTitle}</h2>
         <p className = "game-description">{gamesText[language].ticDescription}</p>
-        <a href="https://tictaktoegamebyjawadjammoul49739.pages.dev/"><button className="game-button" onClick={ () => { playMusic(); playClick();}}>{gamesText[language].ticButton}</button></a>
+        <a href="https://tictaktoegamebyjawadjammoul49739.pages.dev/" target="_blank" rel="noopener noreferrer"><button className="game-button" onClick={ () => { stopMusic(); playClick();}}>{gamesText[language].ticButton}</button></a>
         </div>
         <div className="game-card">
              <h2 className = "game-title">{gamesText[language].snakeTitle}</h2>
         <p className = "game-description">{gamesText[language].snakeDescription}</p>
-        <a href="https://crazysnackgame98437.pages.dev"><button className="game-button" onClick={ () => { playMusic(); playClick();}}>{gamesText[language].snakeButton}</button></a>
+        <a href="https://crazysnackgame98437.pages.dev" target="_blank" rel="noopener noreferrer"><button className="game-button" onClick={ () => { stopMusic(); playClick();}}>{gamesText[language].snakeButton}</button></a>
         </div>      
     </div>
     );

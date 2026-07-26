@@ -15,6 +15,13 @@ function App() {
       musicRef.current.play().catch( () => {});
     }
   };
+
+  const stopMusic = () => {
+    if(musicRef.current) {
+      musicRef.current.pause();
+      musicRef.current.currentTime = 0;
+    }
+  }
   const [muted , setMuted] = useState(false);
   const [language , setLanguage] = useState("en");
   useEffect(() => {
@@ -62,7 +69,7 @@ function App() {
     <div className ="page-content">
     <Routes>
       <Route path = "/" element={<Home language={language} playMusic={playMusic}/>}/>
-      <Route path = "/games" element={<Games language={language} playMusic={playMusic}/>} />
+      <Route path = "/games" element={<Games language={language} playMusic={playMusic} stopMusic={stopMusic} />} />
       <Route path = "/books" element={<Books language={language} playMusic={playMusic}/>} />
       <Route path = "/articles" element = {<Articles language={language} playMusic={playMusic}/>} />
     </Routes>
