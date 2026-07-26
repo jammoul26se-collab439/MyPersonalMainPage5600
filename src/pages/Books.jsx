@@ -1,7 +1,7 @@
 import "../styles/Books.css";
 import { playClick } from "../util/playClick";
 
-function Books({language , playMusic}) {
+function Books({language , playMusic , stopMusic}) {
     const booksText = {
     en: {
         title: "My University's Books",
@@ -34,14 +34,12 @@ function Books({language , playMusic}) {
         <div className="page">
            <h1 className="section-title1">{booksText[language].title}</h1>
            <p className="game-description1">{booksText[language].description}</p>
-        <a href="https://universitysbachelorbooks6432.jammoul26se.workers.dev/"><button className = "books-button" onClick={(e) => {
-           e.preventDefault();
-           playMusic();
-           playClick();
-           setTimeout( () => {
-            window.location.href="https://universitysbachelorbooks6432.jammoul26se.workers.dev/";
-           },150);
-        }}>{booksText[language].button}</button></a>
+         <button className = "books-button" onClick= { () => { stopMusic(); playClick();
+            setTimeout(() => {
+                window.open("https://universitysbachelorbooks6432.jammoul26se.workers.dev/" , "_blank");
+                
+            }, 150);
+         }}> {booksText[language].button}</button>
         </div>
         </>
     );

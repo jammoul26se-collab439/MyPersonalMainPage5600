@@ -70,7 +70,7 @@ function App() {
     <Routes>
       <Route path = "/" element={<Home language={language} playMusic={playMusic}/>}/>
       <Route path = "/games" element={<Games language={language} playMusic={playMusic} stopMusic={stopMusic} />} />
-      <Route path = "/books" element={<Books language={language} playMusic={playMusic}/>} />
+      <Route path = "/books" element={<Books language={language} playMusic={playMusic} stopMusic={stopMusic} />} />
       <Route path = "/articles" element = {<Articles language={language} playMusic={playMusic}/>} />
     </Routes>
     </div>
