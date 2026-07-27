@@ -1,11 +1,13 @@
 .section-title1 {
     display: inline-block;
-    font-size: 22px;
-    font-family: "Georgia" , serif;
     background: #d8b4fe;
     color: #08060d;
-    padding: 8px 18px;
+    font-family: "Georgia" , serif ;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 6px 14px;
     border-radius: 8px;
+    margin-bottom: -5px;
 }
 
 .game-description1 {
@@ -37,9 +39,9 @@
 @media (max-width: 768px) {
 
 .section-title1 {
-        font-size: 20px;
+        font-size: 24px;
         padding: 6px 14px;
-        margin-top: 20px;
+        margin-top: -5px;
     }
 .game-description1 {
         font-size: 17px;
