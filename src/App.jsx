@@ -3,7 +3,7 @@ import { useEffect , useRef , useState } from "react";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Games from "./pages/Games";
-import Books from "./pages/Books";
+import Business from "./pages/Business";
 import Articles from "./pages/Articles"
 import "./styles/App.css";
 import { setClickMuted } from "./util/playClick";
@@ -70,7 +70,7 @@ function App() {
     <Routes>
       <Route path = "/" element={<Home language={language} playMusic={playMusic}/>}/>
       <Route path = "/games" element={<Games language={language} playMusic={playMusic} stopMusic={stopMusic} />} />
-      <Route path = "/books" element={<Books language={language} playMusic={playMusic} stopMusic={stopMusic} />} />
+      <Route path = "/books" element={<Business language={language} playMusic={playMusic} stopMusic={stopMusic} />} />
       <Route path = "/articles" element = {<Articles language={language} playMusic={playMusic}/>} />
     </Routes>
     </div>

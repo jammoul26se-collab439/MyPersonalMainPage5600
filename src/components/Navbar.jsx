@@ -37,22 +37,22 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
 };
     const navText = {
     en: {
-        home: "Home", games: "Games", books: "Books", articles: "Articles" , news: "News"
+        home: "Home", games: "Games", books: "Business", articles: "Articles" , news: "News"
 
     },
     fr: {
-        home: "Accueil", games: "Jeux", books: "Livres", articles: "Articles" , news: "Actualités"
+        home: "Accueil", games: "Jeux", books: "Entreprise", articles: "Articles" , news: "Actualités"
 
     },
     es: {
-        home: "Inicio", games: "Juegos", books: "Libros", articles: "Artículos" , news: "Noticias"
+        home: "Inicio", games: "Juegos", books: "Negocio", articles: "Artículos" , news: "Noticias"
 
     },
-    ru: { home: "Главная", games: "Игры", books: "Книги", articles: "Статьи" , news: "Новости"
+    ru: { home: "Главная", games: "Игры", books: "Бизнес", articles: "Статьи" , news: "Новости"
 
     },
     ar: {
-        home: "الرئيسية", games: "الألعاب", books: "الكتب", articles: "المقالات" , news: "الأخبار"
+        home: "الرئيسية", games: "الألعاب", books: "الأعمال", articles: "المقالات" , news: "الأخبار"
     }
 };
  return(

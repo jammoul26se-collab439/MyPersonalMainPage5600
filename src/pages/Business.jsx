@@ -1,7 +1,7 @@
-import "../styles/Books.css";
+import "../styles/Business.css";
 import { playClick } from "../util/playClick";
 
-function Books({language , playMusic , stopMusic}) {
+function Business({language , playMusic , stopMusic}) {
     const booksText = {
     en: {
         title: "My University's Books",
@@ -45,4 +45,4 @@ function Books({language , playMusic , stopMusic}) {
     );
 }
 
-export default Books;
+export default Business;
