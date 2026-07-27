@@ -52,17 +52,20 @@
 
 
 @media(max-width: 768px) {
+
     .game-button {
     width: 85%;
     max-width: 250px;
     font-size: 13px;
     padding: 10px 16px;
     }
+
     .section-title {
         font-size: 20px;
         padding: 6px 14px;
     }
-     .game-card {
+
+    .game-card {
         margin-bottom: 35px;
         
     }
@@ -71,4 +74,8 @@
         margin-top: 5px;
     }
 
+    .game-title {
+        font-size: 22px;
+        padding: 6px 14px;
+    }
 }
