@@ -95,7 +95,6 @@ ar: {
 };
     return (
     <div className="page">
-        <h1 className = "section-title">{gamesText[language].title}</h1>
         <div className = "game-card">
             <h2 className = "game-title">{gamesText[language].ticTitle}</h2>
         <p className = "game-description">{gamesText[language].ticDescription}</p>
