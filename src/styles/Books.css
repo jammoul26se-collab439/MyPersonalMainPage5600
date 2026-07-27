@@ -1,13 +1,13 @@
 .section-title1 {
-    display: inline-block;
-    background: #d8b4fe;
-    color: #08060d;
-    font-family: "Georgia" , serif ;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 6px 14px;
-    border-radius: 8px;
-    margin-bottom: -5px;
+  display: inline-block;
+  font-size: 28px;
+  font-family: "Georgia" , serif;
+  background: #c19a6b;
+  color: #08060d;
+  padding: 8px 18px;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: -10px;
 }
 
 .game-description1 {
@@ -39,21 +39,24 @@
 @media (max-width: 768px) {
 
 .section-title1 {
-        font-size: 24px;
-        padding: 6px 14px;
-        margin-top: -5px;
+        font-size: 18px !important;
+        line-height: 1.2;
+        padding: 4px 10px;
     }
+
 .game-description1 {
         font-size: 17px;
         line-height: 1.6;
         margin-top: -10px;
     }
+
 .books-button {
     width: 85%;
     max-width: 250px;
     font-size: 13px;
     padding: 10px 16px;
 }
+
  .game-title {
         font-size: 24px;
         padding: 6px 14px;
