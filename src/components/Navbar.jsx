@@ -11,31 +11,23 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
     const [payMode , setPayMode] = useState("");
     const sidebarText = {
     en: {
-        sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages" , options: "Options" , about: "About" , news: "News"
-    
+        sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages" , options: "Options" , about: "About" , news: "News" , buyCoffee : "Buy Me a Coffee" , selectPay: "Select Pay Mode" , close : "Close" , goTo: "Go to"
     },
 
     fr: {
-        sound: "Son", muted: "Muet", notMuted: "Activé", languages: "Langues" , options : "Options" , about: "À propos" , news: "Actualités"
-
-
+        sound: "Son", muted: "Muet", notMuted: "Activé", languages: "Langues" , options : "Options" , about: "À propos" , news: "Actualités" , buyCoffee: "Offrez-moi un café", selectPay: "Choisir un mode de paiement", close: "Fermer" , goTo: "Aller à"
     },
 
     es: {
-        sound: "Sonido", muted: "Silenciado", notMuted: "Activado", languages: "Idiomas" , options: "Opciones" , about: "Acerca de" , news: "Noticias"
-
-
+        sound: "Sonido", muted: "Silenciado", notMuted: "Activado", languages: "Idiomas" , options: "Opciones" , about: "Acerca de" , news: "Noticias" , buyCoffee: "Invítame a un café", selectPay: "Seleccionar método de pago", close: "Cerrar" , goTo: "Ir a"
     },
 
     ru: {
-        sound: "Звук", muted: "Выключен", notMuted: "Включен", languages: "Языки" , options: "Настройки" , about: "О сайте" , news: "Новости"
-
-
-
+        sound: "Звук", muted: "Выключен", notMuted: "Включен", languages: "Языки" , options: "Настройки" , about: "О сайте" , news: "Новости" , buyCoffee: "Купить мне кофе", selectPay: "Выберите способ оплаты", close: "Закрыть" , goTo: "Перейти на"
     },
 
     ar: {
-        sound: "الصوت", muted: "مكتوم", notMuted: "غير مكتوم", languages: "اللغات" , options: "الإعدادات" , about: "حول الموقع" , news: "الأخبار"
+        sound: "الصوت", muted: "مكتوم", notMuted: "غير مكتوم", languages: "اللغات" , options: "الإعدادات" , about: "حول الموقع" , news: "الأخبار" , buyCoffee: "ادعمني بفنجان قهوة", selectPay: "اختر وسيلة الدفع", close: "إغلاق" , goTo: "الانتقال إلى"
     }
 };
     const navText = {
@@ -102,12 +94,12 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
     <div className = "language-container">
         <button className="coffee-btn" onClick={() => {
             playMusic(); playClick(); setShowLanguages(false); setShowDonate(!showDonate);
-        }}>Buy Me a Coffee </button>
+        }}>{sidebarText[language].buyCoffee} </button>
     {
       showDonate && (
     <div className="about-overlay">
         <div className="about-modal">
-            <h2>Buy Me a Coffee</h2>
+            <h2>{sidebarText[language].buyCoffee} </h2>
             <div className="pay-select-container">
                 <button
                     className="pay-select-btn"
@@ -117,7 +109,7 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
                         setShowPayModes(!showPayModes);
                     }}
                 >
-                    Select Pay Mode
+                    {sidebarText[language].selectPay}
                 </button>
                 {showPayModes && (
                     <div className="pay-menu">
@@ -159,7 +151,7 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
                             window.open("https://bob-finance.com/" , "_blank");
                         else if(payMode === "OMT Pay")
                             window.open("https://www.omt.com.lb/" , "_blank");
-                    }}> {`Go to ${payMode} Page`} </button>
+                    }}> {`${sidebarText[language].goTo} ${payMode} Page`} </button>
                     <p className="phone-number">
                         My Phone Number:
                         <br />
@@ -173,7 +165,7 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
                     playMusic(); playClick(); setShowDonate(false); setShowPayModes(false); setPayMode("");
                 }}
             >
-                Close
+                {sidebarText[language].close}
             </button>
         </div>
     </div>
