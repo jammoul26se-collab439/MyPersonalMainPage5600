@@ -76,6 +76,7 @@
     width: 100%;
     padding: 10px;
     border: none;
+    margin-top: 12px;
     border-radius: 8px;
     background: #16a34a;
     color: white;
@@ -394,6 +395,23 @@ nav a:hover {
         padding: 8px;
         font-size: 13px;
         border-radius: 6px;
+        
+    }
+    .pay-menu {
+        position: static;
+        width: 100%;
+        min-width: 100%;
+        margin-top: 8px;
+        display: flex;
+        flex-direction: column;
+        left: auto;
+        top: auto;
+    }
+    .pay-menu button{
+        text-align:center;
+    }
+    .go-pay-btn {
+        margin-top: 15px;
     }
 }
 
