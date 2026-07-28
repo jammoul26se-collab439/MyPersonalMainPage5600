@@ -13,8 +13,11 @@ function Games({language , playMusic , stopMusic}) {
         snakeTitle: "Crazy Snake Game",
         snakeDescription:
 `Every time you eat an apple, your snake grows longer. After eating six apples, a lemon appears temporarily. Eating it gives you bonus points. But be careful! After every five apples, a temporary bomb appears. If you touch it, you lose the game. The game includes multiple snake speeds, language switching, and a shop where you can customize the snake's color and appearance after reaching certain high scores.`,
-        snakeButton: "Play Crazy Snake Game"
+        snakeButton: "Play Crazy Snake Game" , 
+        prev: "Prev" ,
+        next: Next" 
     },
+
 fr: {
     title: "Mes Jeux",
     ticTitle: "Jeu Smart TicTacToe",
@@ -24,8 +27,11 @@ fr: {
     snakeTitle: "Jeu Crazy Snake",
     snakeDescription:
 `Chaque fois que vous mangez une pomme, votre serpent grandit. Après avoir mangé six pommes, un citron apparaît temporairement. Le manger vous rapporte des points bonus. Mais attention ! Toutes les cinq pommes, une bombe temporaire apparaît. Si vous la touchez, vous perdez la partie. Le jeu propose plusieurs vitesses de déplacement du serpent, le changement de langue et une boutique où vous pouvez personnaliser la couleur et l'apparence du serpent après avoir atteint certains scores élevés. Pour une meilleure expérience sur PC, il est recommandé de contrôler le serpent avec les touches fléchées du clavier plutôt qu'avec les boutons Gauche, Droite, Haut et Bas affichés à l'écran.`,
-    snakeButton: "Jouer à Crazy Snake"
+    snakeButton: "Jouer à Crazy Snake" , 
+    prev: "Précédent",
+    next: "Suivant"
 },
+
 es: {
     title: "Mis Juegos",
     ticTitle: "Juego Smart TicTacToe",
@@ -35,8 +41,11 @@ es: {
     snakeTitle: "Juego Crazy Snake",
     snakeDescription:
 `Cada vez que comes una manzana, tu serpiente crece. Después de comer seis manzanas, aparece temporalmente un limón. Comerlo te da puntos extra. ¡Pero cuidado! Después de cada cinco manzanas aparece temporalmente una bomba. Si la tocas, perderás la partida. El juego incluye varias velocidades para la serpiente, cambio de idioma y una tienda donde puedes personalizar el color y la apariencia de la serpiente al alcanzar determinadas puntuaciones altas. Para una mejor experiencia en PC, se recomienda controlar la serpiente con las teclas de dirección del teclado en lugar de los botones Izquierda, Derecha, Arriba y Abajo que aparecen en la pantalla.`,
-    snakeButton: "Jugar Crazy Snake"
+    snakeButton: "Jugar Crazy Snake" , 
+     prev: "Anterior",
+    next: "Siguiente"
 },
+
 ru: {
     title: "Мои Игры",
     ticTitle: "Умные Крестики-нолики",
@@ -46,8 +55,11 @@ ru: {
     snakeTitle: "Игра Crazy Snake",
     snakeDescription:
 `Каждый раз, когда вы съедаете яблоко, змейка становится длиннее. После шести съеденных яблок временно появляется лимон. Если съесть его, вы получите дополнительные очки. Но будьте осторожны! После каждых пяти яблок временно появляется бомба. Если вы коснётесь её, игра закончится поражением. В игре доступны несколько скоростей движения змейки, переключение языков и магазин, где можно изменить цвет и внешний вид змейки после достижения определённых высоких результатов. Для наилучшего игрового процесса на компьютере рекомендуется управлять змейкой с помощью клавиш-стрелок на клавиатуре, а не экранных кнопок Влево, Вправо, Вверх и Вниз.`,
-    snakeButton: "Играть в Crazy Snake"
+    snakeButton: "Играть в Crazy Snake" ,
+     prev: "Назад",
+     next: "Далее"
 },
+
 ar: {
     title: "ألعابي",
     ticTitle: "لعبة إكس أو الذكية",
@@ -57,8 +69,11 @@ ar: {
     snakeTitle: "لعبة الثعبان المجنون",
     snakeDescription:
 `في كل مرة تأكل فيها تفاحة، يزداد طول الثعبان. وبعد تناول ست تفاحات، تظهر ليمونة لفترة مؤقتة، وعند أكلها تحصل على نقاط إضافية. لكن انتبه! بعد كل خمس تفاحات تظهر قنبلة مؤقتة، وإذا اصطدمت بها تخسر اللعبة. تتضمن اللعبة عدة سرعات لحركة الثعبان، وإمكانية تغيير اللغة، بالإضافة إلى متجر يمكنك من خلاله تخصيص لون وشكل الثعبان بعد الوصول إلى نتائج مرتفعة معينة. ولأفضل تجربة على الكمبيوتر، يُنصح بالتحكم بالثعبان باستخدام أسهم لوحة المفاتيح بدلًا من أزرار اليسار واليمين والأعلى والأسفل الظاهرة على الشاشة.`,
-    snakeButton: "العب الثعبان المجنون"
+    snakeButton: "العب الثعبان المجنون" , 
+    prev: "السابق",
+    next: "التالي"
 }  
+
 };
 return (
     <div className="page">
@@ -86,8 +101,8 @@ return (
             </div>
         )}
         <div className="games-navigation">
-            <button className="page-button" disabled={page === 1} onClick={() => setPage(1)} > Prev </button>
-            <button className="page-button" disabled={page === 2} onClick={() => setPage(2)} > Next </button>
+            <button className="page-button" disabled={page === 1} onClick={() => setPage(1)} > {gamesText[language].prev} </button>
+            <button className="page-button" disabled={page === 2} onClick={() => setPage(2)} > {gamesText[language].next}</button>
         </div>
     </div>
  );
