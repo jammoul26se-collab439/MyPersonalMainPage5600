@@ -104,32 +104,65 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
             playMusic(); playClick(); setShowLanguages(false); setShowDonate(!showDonate);
         }}>Buy Me a Coffee </button>
     {
-        showDonate && (
-            <div className = "coffee-box">
-                <div className= "pay-select-container">
-                    <button className = "pay-select-btn" onClick= { () => {
-                        playMusic(); playClick(); setShowPayModes(!showPayModes)
-                    }} >Select Pay Mode </button>
-                    { showPayModes(!showPayModes) && (
-                        <div className="pay-menu"> <button onClick={ () => { playMusic(); playClick(); setPayMode("Whish Money"); setShowPayModes(false); }}> Whish Money </button>
-                        <button onClick= { () => {
-                            playMusic(); playClick(); setPayMode("BoB finance"); setShowPayModes(false); 
-                        }}> BoB finance </button>
-                        <button onClick={ () => { playMusic(); playClick(); setPayMode("OMT Pay"); setShowPayModes(false); }}> OMT Pay </button> </div>
-                    )}
+        {showDonate && (
+    <div className="about-overlay">
+        <div className="about-modal">
+            <h2>Buy Me a Coffee</h2>
+            <div className="pay-select-container">
+                <button
+                    className="pay-select-btn"
+                    onClick={() => {
+                        playMusic();
+                        playClick();
+                        setShowPayModes(!showPayModes);
+                    }}
+                >
+                    Select Pay Mode
+                </button>
+                {showPayModes && (
+                    <div className="pay-menu">
+                        <button onClick={() => {
+                            setPayMode("Whish Money");
+                            setShowPayModes(false);
+                        }}>
+                            Whish Money
+                        </button>
+                        <button onClick={() => {
+                            setPayMode("BoB finance");
+                            setShowPayModes(false);
+                        }}>
+                            BoB finance
+                        </button>
+                        <button onClick={() => {
+                            setPayMode("OMT Pay");
+                            setShowPayModes(false);
+                        }}>
+                            OMT Pay
+                        </button>
                     </div>
-                    {payMode !== "" && (
-                        <>
-                        <button className="go-pay-btn" onClick= { () => { playMusic(); playClick(); }}>
-                            {`Go to ${payMode} Page`} </button>
-                            <p className="phone-number"> My Phone Number: 
-                                <br /> +961 76 125 354
-                                </p>
-                            </>
-                    )}
-                    <button className="close-pay-btn" onClick={ () => { playMusic(); playClick(); setShowDonate(false); setShowPayModes(false); setPayMode("");             
-                    }} > Close </button> </div>
-                )} </div>
+                )}
+            </div>
+            {payMode !== "" && (
+                <>
+                    <button className="go-pay-btn"> {`Go to ${payMode} Page`} </button>
+                    <p className="phone-number">
+                        My Phone Number:
+                        <br />
+                        +961 76 125 354
+                    </p>
+                </>
+            )}
+            <button
+                className="close-about-btn"
+                onClick={() => {
+                    playMusic(); playClick(); setShowDonate(false); setShowPayModes(false); setPayMode("");
+                }}
+            >
+                Close
+            </button>
+        </div>
+    </div>
+)} </div>
     {
         showAbout && ( <div className="about-overlay"> <div className="about-modal">
                           <h2>About</h2>
