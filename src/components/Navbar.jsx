@@ -150,7 +150,17 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
             </div>
             {payMode !== "" && (
                 <>
-                    <button className="go-pay-btn"> {`Go to ${payMode} Page`} </button>
+                    <button className="go-pay-btn" onClick={() => {
+                        playMusic();
+                        playClick();
+                        if(payMode === "Whish Money")
+                            window.open("https://whish.money/" , "_blank");
+                        else if(payMode === "BoB finance") {
+                            window.open("https://bob-finance.com/" , "_blank");
+                        else if(payMode === "OMT Pay")
+                            window.open("https://www.omt.com.lb/" , "_blank");
+                        }
+                    }}> {`Go to ${payMode} Page`} </button>
                     <p className="phone-number">
                         My Phone Number:
                         <br />
