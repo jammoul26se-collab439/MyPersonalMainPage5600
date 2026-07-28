@@ -81,9 +81,9 @@ return (
             </>
         )}
         {page === 2 && (
-            <>
+            <div className="games-page-placeholder">
                 {/*New Games*/}
-            </>
+            </div>
         )}
         <div className="games-navigation">
             <button className="page-button" disabled={page === 1} onClick={() => setPage(1)} > Prev </button>

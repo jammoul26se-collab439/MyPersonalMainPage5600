@@ -75,7 +75,15 @@
     cursor: not-allowed;
 }
 
+.games-page-placeholder {
+    min-height: 700px;
+}
+
 @media(max-width: 768px) {
+
+    .games-page-placeholder {
+        min-height: 500px;
+    }
 
 
     .games-navigation {
