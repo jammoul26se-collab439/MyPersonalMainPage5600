@@ -28,6 +28,7 @@
     align-items: flex-start;
     gap: 12px;
     margin-top: -5px;
+    transform: translateX(-8px);
 }
 
 .social-links a {
