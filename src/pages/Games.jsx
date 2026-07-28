@@ -15,7 +15,7 @@ function Games({language , playMusic , stopMusic}) {
 `Every time you eat an apple, your snake grows longer. After eating six apples, a lemon appears temporarily. Eating it gives you bonus points. But be careful! After every five apples, a temporary bomb appears. If you touch it, you lose the game. The game includes multiple snake speeds, language switching, and a shop where you can customize the snake's color and appearance after reaching certain high scores.`,
         snakeButton: "Play Crazy Snake Game" , 
         prev: "Prev" ,
-        next: Next" 
+        next: "Next" 
     },
 
 fr: {

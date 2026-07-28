@@ -6,6 +6,9 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
     const [open , setOpen] = useState(false);
     const [showLanguages , setShowLanguages] = useState(false);
     const [ showAbout , setShowAbout ] = useState(false);
+    const [showDonate , setShowDonate] = useState(false);
+    const [showPayModes , setShowPayModes] = useState(false);
+    const [payMode , setPayMode] = useState("");
     const sidebarText = {
     en: {
         sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages" , options: "Options" , about: "About" , news: "News"
@@ -96,6 +99,37 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
        <div className = "language-container">
         <button className="about-btn" onClick={ () => {  playMusic(); playClick(); setShowLanguages(false); setShowAbout(true);  }}> {sidebarText[language].about} </button>
     </div>
+    <div className = "language-container">
+        <button className="coffee-btn" onClick={() => {
+            playMusic(); playClick(); setShowLanguages(false); setShowDonate(!showDonate);
+        }}>Buy Me a Coffee </button>
+    {
+        showDonate && (
+            <div className = "coffee-box">
+                <div className= "pay-select-container">
+                    <button className = "pay-select-btn" onClick= { () => {
+                        playMusic(); playClick(); setShowPayModes(!showPayModes)
+                    }} >Select Pay Mode </button>
+                    { showPayModes(!showPayModes) && (
+                        <div className="pay-menu"> <button onClick={ () => { playMusic(); playClick(); setPayMode("Whish Money"); setShowPayModes(false); }}> Whish Money </button>
+                        <button onClick()= { () => {
+                            playMusic(); playClick(); setPayMode("BoB finance"); setShowPayModes(false); 
+                        }}> BoB finance </button>
+                        <button onClick={ () => { playMusic(); playClick(); setPayMode("OMT Pay"); setShowPayModes(false); }}> OMT Pay </button> </div>
+                    )}
+                    </div>
+                    {payMode !== "" && (
+                        <>
+                        <button className="go-pay-btn" onClick= { () => { playMusic(); playClick(); }}>
+                            {`Go to ${payMode} Page`} </button>
+                            <p className="phone-number"> My Phone Number: 
+                                <br /> +961 76 125 354
+                                </p>
+                            </>
+                    )}
+                    <button className="close-pay-btn" onClick={ () => { playMusic(); playClick(); setShowDonate(false); setShowPayModes(false); setPayMode("");             
+                    }} > Close </button> </div>
+                )} </div>
     {
         showAbout && ( <div className="about-overlay"> <div className="about-modal">
                           <h2>About</h2>
