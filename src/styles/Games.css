@@ -51,7 +51,7 @@
 
 .games-navigation {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 15px;
     margin-top: 40px;
 }
@@ -90,6 +90,7 @@
     .games-navigation {
         gap: 10px;
         margin-top: 25px;
+        justify-content: flex-start;
     }
 
     .page-button {
@@ -97,7 +98,7 @@
         font-size: 12px;
         padding: 7px 0;
     }
-    
+
     .game-button {
     width: 82%;
     max-width: 230px;
