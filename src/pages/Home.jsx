@@ -73,6 +73,8 @@ Disfruto creando proyectos reales, aprendiendo nuevas tecnologías, mejorando mi
          <div className="about"> 
    <h2 className="section-title">{homeText[language].about}</h2>
    <pre className="game-description">{homeText[language].description}</pre>
+   <br />
+   <br />
    <h2 className = "section-title">{homeText[language].follow}</h2>
    <div className="social-links">
      <a href="https://youtube.com/@itsjawad-j4x?si=9R0ggTnSpcKa9gGI" onClick={ (e) => {
