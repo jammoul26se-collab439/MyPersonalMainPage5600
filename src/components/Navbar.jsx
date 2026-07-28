@@ -73,7 +73,7 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
         </ul>
     </nav>
     <div className = { open ? "sidebar active" : "sidebar"}>
-        <button className = "close-btn" onClick={() => { playMusic();  playClick(); setShowLanguages(false); setOpen(false);}}>✕</button>
+        <button className = "close-btn" onClick={() => { playMusic();  playClick(); setShowLanguages(false); setOpen(false); setPayMode();}}>✕</button>
         <h3 className = "sidebar-title">{sidebarText[language].options}</h3>
         <div className="language-container">
              <button className = {muted? "sound-btn muted" : "sound-btn unmuted"} onClick={() => {playMusic(); playClick(); setShowLanguages(false);  setMuted(!muted); } } >{sidebarText[language].sound} : {muted? sidebarText[language].muted : sidebarText[language].notMuted}</button>
@@ -104,7 +104,7 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
             playMusic(); playClick(); setShowLanguages(false); setShowDonate(!showDonate);
         }}>Buy Me a Coffee </button>
     {
-        {showDonate && (
+      showDonate && (
     <div className="about-overlay">
         <div className="about-modal">
             <h2>Buy Me a Coffee</h2>
@@ -122,18 +122,24 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
                 {showPayModes && (
                     <div className="pay-menu">
                         <button onClick={() => {
+                            playMusic();
+                            playClick();
                             setPayMode("Whish Money");
                             setShowPayModes(false);
                         }}>
                             Whish Money
                         </button>
                         <button onClick={() => {
+                            playMusic();
+                            playClick();
                             setPayMode("BoB finance");
                             setShowPayModes(false);
                         }}>
                             BoB finance
                         </button>
                         <button onClick={() => {
+                            playMusic();
+                            playClick();
                             setPayMode("OMT Pay");
                             setShowPayModes(false);
                         }}>
@@ -162,7 +168,9 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
             </button>
         </div>
     </div>
-)} </div>
+)} 
+
+</div>
     {
         showAbout && ( <div className="about-overlay"> <div className="about-modal">
                           <h2>About</h2>
