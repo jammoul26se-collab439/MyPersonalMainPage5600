@@ -28,7 +28,7 @@
     align-items: flex-start;
     gap: 12px;
     margin-top: -5px;
-    transform: translateX(-8px);
+    transform: translateX(8px);
 }
 
 .social-links a {
@@ -65,6 +65,7 @@
     .section-title {
         font-size: 20px;
         padding: 6px 14px;
+        margin-top: -8px;
     }
     .game-title {
         font-size: 24px;
