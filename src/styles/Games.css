@@ -57,21 +57,22 @@
 }
 
 .page-button {
-    background: #0e172c;
+    background: #8b1e3f;
     color:white;
-    border: 1px solid #64748b;
+    border: 1px solid #a63d5a;
     border-radius: 8px;
-    padding: 10px 24px;
-    font-size: 15px;
+    padding: 8px 20px;
+    font-size: 13px;
     cursor: pointer;
     transition: .3s;
 }
 
 .page-button:hover:not(:disabled) {
-    background: #1e293b;
+    background: #701730;
 }
 .page-button:disabled {
-    opacity: .45;
+    background: #8b1e3f;
+    opacity: 0.4;
     cursor: not-allowed;
 }
 
@@ -92,10 +93,11 @@
     }
 
     .page-button {
-        width: 110px;
-        font-size: 13px;
-        padding: 8px 0;
+        width: 95px;
+        font-size: 12px;
+        padding: 7px 0;
     }
+    
     .game-button {
     width: 82%;
     max-width: 230px;
