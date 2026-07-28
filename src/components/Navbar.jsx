@@ -112,7 +112,7 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
                     }} >Select Pay Mode </button>
                     { showPayModes(!showPayModes) && (
                         <div className="pay-menu"> <button onClick={ () => { playMusic(); playClick(); setPayMode("Whish Money"); setShowPayModes(false); }}> Whish Money </button>
-                        <button onClick()= { () => {
+                        <button onClick= { () => {
                             playMusic(); playClick(); setPayMode("BoB finance"); setShowPayModes(false); 
                         }}> BoB finance </button>
                         <button onClick={ () => { playMusic(); playClick(); setPayMode("OMT Pay"); setShowPayModes(false); }}> OMT Pay </button> </div>
