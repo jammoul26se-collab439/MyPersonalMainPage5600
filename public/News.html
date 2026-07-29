@@ -35,11 +35,91 @@
         <div class="modal-content">
             <h2>Options</h2>
             <button id="soundBtn">Sound : Not Muted</button>
-            <button id="languagesBtn">Languages</button>
-            <button id="closeOptionsBtn">Close</button>
+            <div class="language-box">
+              <select id="languageSelect">
+                 <option value="" selected disabled>Languages</option>
+                 <option value="en">English</option>
+                 <option value="fr">Français</option>
+                 <option value="es">Español</option>
+                 <option value="ru">Русский</option>
+                 <option value="ar">العربية</option>
+              </select>
         </div>
+         <button id="closeOptionsBtn">Close</button>
+            </div>
     </div>
     <script>
+
+        const translations = {
+
+    en: {
+        title: "Programming Books Services - Opening Soon (29/07/2026)",
+        description: `New news! The service of selling programming books will begin and be available online from the first month of September 2026. These books have been made with great love and effort, but their prices are very reasonable, especially after the price of basic resources for this business has increased. Eight programming books will now be displayed, and delivery service is available to all Lebanese territories. For any questions or complaints, please contact the owner via his number or through his account.`,
+        options: "Options",
+        return: "Return to Main Page",
+        modalTitle: "Options",
+        soundMuted: "Sound : Muted",
+        soundNotMuted: "Sound : Not Muted",
+        languages: "Languages",
+        close: "Close" ,
+        prev: "Prev",
+        next: "Next"
+    },
+    fr: {
+    title: "Services de Livres de Programmation - Ouverture Prochaine (29/07/2026)",
+    description: `Grande nouvelle ! Le service de vente de livres de programmation commencera et sera disponible en ligne à partir du premier mois de septembre 2026. Ces livres ont été réalisés avec beaucoup de passion et d'efforts, mais leurs prix restent très raisonnables, surtout après l'augmentation du coût des ressources de base nécessaires à cette activité. Huit livres de programmation seront désormais proposés, et un service de livraison sera disponible dans tout le territoire libanais. Pour toute question ou réclamation, veuillez contacter le propriétaire via son numéro ou son compte.`,
+    options: "Options",
+    return: "Retour à la page principale",
+    modalTitle: "Options",
+    soundMuted: "Son : Coupé",
+    soundNotMuted: "Son : Activé",
+    languages: "Langues",
+    close: "Fermer" ,
+    prev: "Préc.",
+    next: "Suiv."
+},
+es: {
+    title: "Servicios de Libros de Programación - Próximamente (29/07/2026)",
+    description: `¡Buenas noticias! El servicio de venta de libros de programación comenzará y estará disponible en línea a partir del primer mes de septiembre de 2026. Estos libros han sido creados con mucho esfuerzo y dedicación, pero sus precios son muy razonables, especialmente después del aumento del costo de los recursos básicos para este trabajo. Ahora se ofrecerán ocho libros de programación y habrá servicio de entrega a todo el territorio libanés. Para cualquier consulta o reclamación, comuníquese con el propietario mediante su número o su cuenta.`,
+    options: "Opciones",
+    return: "Volver a la página principal",
+    modalTitle: "Opciones",
+    soundMuted: "Sonido : Silenciado",
+    soundNotMuted: "Sonido : Activado",
+    languages: "Idiomas",
+    close: "Cerrar" ,
+    prev: "Anterior",
+    next: "Siguiente"
+},
+
+ru: {
+    title: "Сервис книг по программированию - Скоро открытие (29/07/2026)",
+    description: `Хорошие новости! Сервис по продаже книг по программированию начнет работать и станет доступен онлайн с первого месяца сентября 2026 года. Эти книги были созданы с большой любовью и усилиями, но их цены остаются очень доступными, несмотря на рост стоимости основных ресурсов для этого проекта. Теперь будут представлены восемь книг по программированию, а доставка будет доступна по всей территории Ливана. По всем вопросам или жалобам, пожалуйста, свяжитесь с владельцем по его номеру телефона или через его аккаунт.`,
+    options: "Настройки",
+    return: "Вернуться на главную страницу",
+    modalTitle: "Настройки",
+    soundMuted: "Звук : Выключен",
+    soundNotMuted: "Звук : Включен",
+    languages: "Языки",
+    close: "Закрыть" ,
+    prev: "Назад",
+    next: "Далее"
+},
+ar: {
+    title: "خدمات كتب البرمجة - الافتتاح قريبًا (29/07/2026)",
+    description: `خبر جديد! ستبدأ خدمة بيع كتب البرمجة وستصبح متاحة عبر الإنترنت اعتبارًا من الشهر الأول من سبتمبر 2026. لقد تم إعداد هذه الكتب بكل حب وجهد، ومع ذلك فإن أسعارها مناسبة جدًا، خاصة بعد ارتفاع تكلفة الموارد الأساسية اللازمة لهذا العمل. سيتم الآن عرض ثمانية كتب برمجية، كما ستتوفر خدمة التوصيل إلى جميع الأراضي اللبنانية. لأي استفسار أو شكوى، يرجى التواصل مع المالك عبر رقم هاتفه أو من خلال حسابه.`,
+    options: "الخيارات",
+    return: "العودة إلى الصفحة الرئيسية",
+    modalTitle: "الخيارات",
+    soundMuted: "الصوت : مكتوم",
+    soundNotMuted: "الصوت : غير مكتوم",
+    languages: "اللغات",
+    close: "إغلاق" ,
+    prev: "السابق",
+    next: "التالي"
+}
+};
+
         const prevBtn = document.getElementById("prevBtn");
         const nextBtn = document.getElementById("nextBtn");
         const title = document.querySelector("h1");
@@ -47,30 +127,102 @@
         const optionsBtn = document.getElementById("optionsBtn");
         const optionsModal = document.getElementById("optionsModal");
         const closeOptionsBtn = document.getElementById("closeOptionsBtn");
-
+        const description = document.querySelector(".text p");
+        const returnBtn = document.getElementById("returnBtn");
+        const languageSelect = document.getElementById("languageSelect");
+        const modalTitle = document.querySelector(".modal-content h2");
+        let muted = false;
+       let currentLanguage = "en";
+        const clickSound = new Audio("/ClickSoundTrack.m4a");
+        const soundBtn = document.getElementById("soundBtn");
+        soundBtn.addEventListener("click" , () => {
+            playClickSound();
+            muted = !muted;
+            const lang = currentLanguage ;
+            if(muted) {
+                soundBtn.textContent = translations[lang].soundMuted;
+                soundBtn.classList.add("muted");
+            }
+            else {
+                soundBtn.textContent = translations[lang].soundNotMuted;
+                soundBtn.classList.remove("muted");
+            }
+        });
 
         optionsBtn.addEventListener("click" , () => {
+            playClickSound();
             optionsModal.style.display = "flex";
         });
+
         closeOptionsBtn.addEventListener("click" , () => {
+            playClickSound();
             optionsModal.style.display = "none";
-               })
+               });
+
        window.addEventListener("click" , (e) => {
         if(e.target === optionsModal)
         optionsModal.style.display = "none";
        });
+
         nextBtn.addEventListener("click" , () => {
+            playClickSound();
             title.style.display = "none";
             content.style.display = "none";
             prevBtn.disabled = false;
             nextBtn.disabled = true;
         });
+
         prevBtn.addEventListener("click" , () => {
+            playClickSound();
             title.style.display = "block";
             content.style.display = "flex";
             prevBtn.disabled = true;
             nextBtn.disabled = false;
         });
+
+
+       function playClickSound() {
+        if(!muted) {
+            clickSound.currentTime = 0;
+            clickSound.play().catch(() => {});
+        }
+       }
+
+       function changeLanguage(lang) {
+        currentLanguage = lang ;
+        const t = translations[lang];
+        title.textContent = t.title;
+        description.textContent = t.description;
+        returnBtn.textContent = t.return;
+        optionsBtn.textContent = t.options;
+        modalTitle.textContent = t.modalTitle;
+        document.getElementById("closeOptionsBtn").textContent = t.close;
+        prevBtn.textContent = t.prev;
+        nextBtn.textContent = t.next;
+        if(muted) {
+            soundBtn.textContent = t.soundMuted;
+            soundBtn.classList.add("muted");
+        }
+        else {
+            soundBtn.textContent = t.soundNotMuted;
+            soundBtn.classList.remove("muted");
+        }
+
+        languageSelect.options[0].text = t.languages;
+        languageSelect.selectedIndex = 0;
+       }
+
+       languageSelect.addEventListener("change" , function () {
+        playClickSound();
+        changeLanguage(this.value);
+       });
+
+       returnBtn.addEventListener("click" , () => {
+        playClickSound();
+        window.location.href = "https://mypersonalmainpage5600.jammoul26se.workers.dev/" ;
+       });
+
+
     </script>
     </body>
 </html>
