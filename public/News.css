@@ -70,17 +70,27 @@ h1 {
 
 @media(max-width:768px) {
     .news-content {
+        display: flex;
         flex-direction: column;
-        gap: 25px;
+        align-items: center;
+        gap: 20px;
         padding: 20px;
     }
+
+    .text {
+        width: 100%;
+    }
+
     .image {
-        order: -1;
+        width: 100%;
+        order: 1;
+        display: flex;
+        justify-content: center;
     }
 
     .image img {
-        width: 100%;
-        max-width: 100%;
+        width: 90%;
+        max-width: 350px;
         height: auto;
     }
 
