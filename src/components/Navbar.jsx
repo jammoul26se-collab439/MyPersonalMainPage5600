@@ -11,24 +11,24 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
     const [payMode , setPayMode] = useState("");
     const sidebarText = {
     en: {
-        sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages" , options: "Options" , about: "About" , news: "News" , buyCoffee : "Buy Me a Coffee" , selectPay: "Select Pay Mode" , close : "Close" , goTo: "Go to"
-    },
-
+        sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages" , options: "Options" , about: "About" , news: "News" , buyCoffee : "Buy Me a Coffee" , selectPay: "Select Pay Mode" , close : "Close" , goTo: "Go to" , aboutTitle: "About", ownerTitle: "Owner & Programmer of the Site", musicTitle: "Music Owner"
+},
     fr: {
-        sound: "Son", muted: "Muet", notMuted: "Activé", languages: "Langues" , options : "Options" , about: "À propos" , news: "Actualités" , buyCoffee: "Offrez-moi un café", selectPay: "Choisir un mode de paiement", close: "Fermer" , goTo: "Aller à"
-    },
+        sound: "Son", muted: "Muet", notMuted: "Activé", languages: "Langues" , options : "Options" , about: "À propos" , news: "Actualités" , buyCoffee: "Offrez-moi un café", selectPay: "Choisir un mode de paiement", close: "Fermer" , goTo: "Aller à" , aboutTitle: "À propos", ownerTitle: "Propriétaire et programmeur du site", musicTitle: "Propriétaire de la musique"
+    },  
+
+    
 
     es: {
-        sound: "Sonido", muted: "Silenciado", notMuted: "Activado", languages: "Idiomas" , options: "Opciones" , about: "Acerca de" , news: "Noticias" , buyCoffee: "Invítame a un café", selectPay: "Seleccionar método de pago", close: "Cerrar" , goTo: "Ir a"
-    },
-
+        sound: "Sonido", muted: "Silenciado", notMuted: "Activado", languages: "Idiomas" , options: "Opciones" , about: "Acerca de" , news: "Noticias" , buyCoffee: "Invítame a un café", selectPay: "Seleccionar método de pago", close: "Cerrar" , goTo: "Ir a" , aboutTitle: "Acerca de", ownerTitle: "Propietario y programador del sitio", musicTitle: "Propietario de la música"
+ },
     ru: {
-        sound: "Звук", muted: "Выключен", notMuted: "Включен", languages: "Языки" , options: "Настройки" , about: "О сайте" , news: "Новости" , buyCoffee: "Купить мне кофе", selectPay: "Выберите способ оплаты", close: "Закрыть" , goTo: "Перейти на"
+        sound: "Звук", muted: "Выключен", notMuted: "Включен", languages: "Языки" , options: "Настройки" , about: "О сайте" , news: "Новости" , buyCoffee: "Купить мне кофе", selectPay: "Выберите способ оплаты", close: "Закрыть" , goTo: "Перейти на" , aboutTitle: "О сайте", ownerTitle: "Владелец и разработчик сайта", musicTitle: "Автор музыки"
     },
 
     ar: {
-        sound: "الصوت", muted: "مكتوم", notMuted: "غير مكتوم", languages: "اللغات" , options: "الإعدادات" , about: "حول الموقع" , news: "الأخبار" , buyCoffee: "ادعمني بفنجان قهوة", selectPay: "اختر وسيلة الدفع", close: "إغلاق" , goTo: "الانتقال إلى"
-    }
+        sound: "الصوت", muted: "مكتوم", notMuted: "غير مكتوم", languages: "اللغات" , options: "الإعدادات" , about: "حول الموقع" , news: "الأخبار" , buyCoffee: "ادعمني بفنجان قهوة", selectPay: "اختر وسيلة الدفع", close: "إغلاق" , goTo: "الانتقال إلى" , aboutTitle: "حول الموقع", ownerTitle: "مالك ومبرمج الموقع", musicTitle: "صاحب الموسيقى"
+    } 
 };
     const navText = {
     en: {
@@ -174,11 +174,11 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
 </div>
     {
         showAbout && ( <div className="about-overlay"> <div className="about-modal">
-                          <h2>About</h2>
-                          <p> <strong>Owner & Programmer of the Site:</strong><br /> Jawad Jammoul :) </p>
-                          <p> <strong>Music Owner:</strong><br />
+                          <h2>{sidebarText[language].aboutTitle}</h2>
+                          <p> <strong>{sidebarText[language].ownerTitle}</strong><br /> Jawad Jammoul :) </p>
+                          <p> <strong>{sidebarText[language].musicTitle}</strong><br />
                            <a href="https://youtu.be/_ZKliUdu4T0?si=Z-L72HqcNE99SGS8" target="_blank" rel="noreferrer">Riyandi Kusuma</a> </p>
-                           <button className="close-about-btn" onClick={ () => { playMusic(); playClick(); setShowAbout(false); }}> Close </button>
+                           <button className="close-about-btn" onClick={ () => { playMusic(); playClick(); setShowAbout(false); }}>{sidebarText[language].close}</button>
                            </div> 
                               </div>
                           )}
@@ -186,5 +186,4 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
     </>
  );
 }
-
 export default Navbar;

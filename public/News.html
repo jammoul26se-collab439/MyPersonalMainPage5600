@@ -7,6 +7,10 @@
         <link rel="stylesheet" href="./News.css">
     </head>
     <body>
+        <div class="top-buttons">
+            <button id="returnBtn">Return to Main Page</button>
+            <button id="optionsBtn">Options</button>
+        </div>
         <div class="container">
              <h1>Programming Books Services - Opening Soon (29/07/2026)</h1>
              <div class="news-content">
@@ -27,11 +31,34 @@
         <button id="prevBtn" disabled>Prev</button>
         <button id="nextBtn">Next</button>
     </div>       
+    <div id="optionsModal" class="modal">
+        <div class="modal-content">
+            <h2>Options</h2>
+            <button id="soundBtn">Sound : Not Muted</button>
+            <button id="languagesBtn">Languages</button>
+            <button id="closeOptionsBtn">Close</button>
+        </div>
+    </div>
     <script>
         const prevBtn = document.getElementById("prevBtn");
         const nextBtn = document.getElementById("nextBtn");
         const title = document.querySelector("h1");
         const content = document.querySelector(".news-content");
+        const optionsBtn = document.getElementById("optionsBtn");
+        const optionsModal = document.getElementById("optionsModal");
+        const closeOptionsBtn = document.getElementById("closeOptionsBtn");
+
+
+        optionsBtn.addEventListener("click" , () => {
+            optionsModal.style.display = "flex";
+        });
+        closeOptionsBtn.addEventListener("click" , () => {
+            optionsModal.style.display = "none";
+               })
+       window.addEventListener("click" , (e) => {
+        if(e.target === optionsModal)
+        optionsModal.style.display = "none";
+       });
         nextBtn.addEventListener("click" , () => {
             title.style.display = "none";
             content.style.display = "none";
