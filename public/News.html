@@ -22,6 +22,28 @@
                  <img src="./BooksAnnoucement10.jpeg" alt="Books Annoucement">
             </div>
         </div>
+    </div>
+    <div class="news-navigation">
+        <button id="prevBtn" disabled>Prev</button>
+        <button id="nextBtn">Next</button>
     </div>       
+    <script>
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const title = document.querySelector("h1");
+        const content = document.querySelector(".news-content");
+        nextBtn.addEventListener("click" , () => {
+            title.style.display = "none";
+            content.style.display = "none";
+            prevBtn.disabled = false;
+            nextBtn.disabled = true;
+        });
+        prevBtn.addEventListener("click" , () => {
+            title.style.display = "block";
+            content.style.display = "flex";
+            prevBtn.disabled = true;
+            nextBtn.disabled = false;
+        });
+    </script>
     </body>
 </html>

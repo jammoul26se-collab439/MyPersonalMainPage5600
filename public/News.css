@@ -66,9 +66,49 @@ h1 {
     box-shadow: 0 6px 15px rgba(0 , 0 , 0 , .2);
 }
 
+.news-navigation {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
+.news-navigation button {
+    padding: 12px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #1f4db8;
+    color: white;
+    transition: .3s;
+}
+
+.news-navigation button:hover:not(:disabled) {
+    background: #153b91;
+}
+
+.news-navigation button:disabled {
+    background: #999;
+    cursor: not-allowed;
+    opacity: .6;
+}
 
 @media(max-width:768px) {
+    .news-navigation {
+      gap:15px;
+      margin-top: 30px;
+      padding: 0 15px;
+    }
+
+    .news-navigation button{
+        flex: 1;
+        max-width:160px;
+        padding: 12px;
+        font-size: 16px;
+    }
+
     .news-content {
         display: flex;
         flex-direction: column;
