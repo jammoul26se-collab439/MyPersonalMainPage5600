@@ -11,23 +11,20 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
     const [payMode , setPayMode] = useState("");
     const sidebarText = {
     en: {
-        sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages" , options: "Options" , about: "About" , news: "News" , buyCoffee : "Buy Me a Coffee" , selectPay: "Select Pay Mode" , close : "Close" , goTo: "Go to" , aboutTitle: "About", ownerTitle: "Owner & Programmer of the Site", musicTitle: "Music Owner"
+        sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages" , options: "Options" , about: "About" , news: "News" , buyCoffee : "Buy Me a Coffee" , selectPay: "Select Pay Mode" , close : "Close" , goTo: "Go to" , aboutTitle: "About", ownerTitle: "Owner & Programmer of the Site", musicTitle: "Music Owner" , myPhone: "My Phone Number :"
 },
     fr: {
-        sound: "Son", muted: "Muet", notMuted: "Activé", languages: "Langues" , options : "Options" , about: "À propos" , news: "Actualités" , buyCoffee: "Offrez-moi un café", selectPay: "Choisir un mode de paiement", close: "Fermer" , goTo: "Aller à" , aboutTitle: "À propos", ownerTitle: "Propriétaire et programmeur du site", musicTitle: "Propriétaire de la musique"
+        sound: "Son", muted: "Muet", notMuted: "Activé", languages: "Langues" , options : "Options" , about: "À propos" , news: "Actualités" , buyCoffee: "Offrez-moi un café", selectPay: "Choisir un mode de paiement", close: "Fermer" , goTo: "Aller à" , aboutTitle: "À propos", ownerTitle: "Propriétaire et programmeur du site", musicTitle: "Propriétaire de la musique" , myPhone: "Mon numéro :"
     },  
-
-    
-
     es: {
-        sound: "Sonido", muted: "Silenciado", notMuted: "Activado", languages: "Idiomas" , options: "Opciones" , about: "Acerca de" , news: "Noticias" , buyCoffee: "Invítame a un café", selectPay: "Seleccionar método de pago", close: "Cerrar" , goTo: "Ir a" , aboutTitle: "Acerca de", ownerTitle: "Propietario y programador del sitio", musicTitle: "Propietario de la música"
+        sound: "Sonido", muted: "Silenciado", notMuted: "Activado", languages: "Idiomas" , options: "Opciones" , about: "Acerca de" , news: "Noticias" , buyCoffee: "Invítame a un café", selectPay: "Seleccionar método de pago", close: "Cerrar" , goTo: "Ir a" , aboutTitle: "Acerca de", ownerTitle: "Propietario y programador del sitio", musicTitle: "Propietario de la música" , myPhone: "Mi número :"
  },
     ru: {
-        sound: "Звук", muted: "Выключен", notMuted: "Включен", languages: "Языки" , options: "Настройки" , about: "О сайте" , news: "Новости" , buyCoffee: "Купить мне кофе", selectPay: "Выберите способ оплаты", close: "Закрыть" , goTo: "Перейти на" , aboutTitle: "О сайте", ownerTitle: "Владелец и разработчик сайта", musicTitle: "Автор музыки"
+        sound: "Звук", muted: "Выключен", notMuted: "Включен", languages: "Языки" , options: "Настройки" , about: "О сайте" , news: "Новости" , buyCoffee: "Купить мне кофе", selectPay: "Выберите способ оплаты", close: "Закрыть" , goTo: "Перейти на" , aboutTitle: "О сайте", ownerTitle: "Владелец и разработчик сайта", musicTitle: "Автор музыки" ,  myPhone: "Мой номер телефона:"
     },
 
     ar: {
-        sound: "الصوت", muted: "مكتوم", notMuted: "غير مكتوم", languages: "اللغات" , options: "الإعدادات" , about: "حول الموقع" , news: "الأخبار" , buyCoffee: "ادعمني بفنجان قهوة", selectPay: "اختر وسيلة الدفع", close: "إغلاق" , goTo: "الانتقال إلى" , aboutTitle: "حول الموقع", ownerTitle: "مالك ومبرمج الموقع", musicTitle: "صاحب الموسيقى"
+        sound: "الصوت", muted: "مكتوم", notMuted: "غير مكتوم", languages: "اللغات" , options: "الإعدادات" , about: "حول الموقع" , news: "الأخبار" , buyCoffee: "ادعمني بفنجان قهوة", selectPay: "اختر وسيلة الدفع", close: "إغلاق" , goTo: "الانتقال إلى" , aboutTitle: "حول الموقع", ownerTitle: "مالك ومبرمج الموقع", musicTitle: "صاحب الموسيقى" ,   myPhone: "رقم هاتفي :"
     } 
 };
     const navText = {
@@ -153,7 +150,7 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
                             window.open("https://www.omt.com.lb/" , "_blank");
                     }}> {`${sidebarText[language].goTo} ${payMode} Page`} </button>
                     <p className="phone-number">
-                        My Phone Number:
+                        {sidebarText[language].myPhone}
                         <br />
                         +961 76 125 354
                     </p>
