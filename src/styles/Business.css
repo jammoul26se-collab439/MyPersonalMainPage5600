@@ -36,6 +36,34 @@
     border-color: #38bdf8;
 }
 
+.games-navigation {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.page-button {
+    background: #8b1e3f;
+    color:white;
+    border: 1px solid #a63d5a;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.page-button:hover:not(:disabled) {
+    background: #701730;
+}
+
+.page-button:disabled {
+    background: #8b1e3f;
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
 @media (max-width: 768px) {
 
 .section-title1 {
@@ -66,4 +94,16 @@
         font-size: 17px;
         line-height: 1.6;
     }
+
+.games-navigation {
+    gap: 10px;
+    margin-top: 25px;
+    justify-content: flex-start;
+}
+
+.page-button {
+    width: 95px;
+    font-size: 12px;
+    padding: 7px 0;
+}
 }
