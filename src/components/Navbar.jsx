@@ -12,37 +12,33 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
     const [showAnonymous , setShowAnonymous] = useState(false);
     const sidebarText = {
     en: {
-        sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages" , options: "Options" , about: "About" , news: "News" , buyCoffee : "Buy Me a Coffee" , selectPay: "Select Pay Mode" , close : "Close" , goTo: "Go to" , aboutTitle: "About", ownerTitle: "Owner & Programmer of the Site", musicTitle: "Music Owner" , myPhone: "My Phone Number :"
+        sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages" , options: "Options" , about: "About" , news: "News" , buyCoffee : "Buy Me a Coffee" , selectPay: "Select Pay Mode" , close : "Close" , goTo: "Go to" , aboutTitle: "About", ownerTitle: "Owner & Programmer of the Site", musicTitle: "Music Owner" , myPhone: "My Phone Number :" , anonymousTitle: "Send me an Anonymous Message!", anonymousText: "Your message will be anonymous. I will receive it via email :)", anonymousPlaceholder: "Write your message here..." , send: "Send"
 },
     fr: {
-        sound: "Son", muted: "Muet", notMuted: "Activé", languages: "Langues" , options : "Options" , about: "À propos" , news: "Actualités" , buyCoffee: "Offrez-moi un café", selectPay: "Choisir un mode de paiement", close: "Fermer" , goTo: "Aller à" , aboutTitle: "À propos", ownerTitle: "Propriétaire et programmeur du site", musicTitle: "Propriétaire de la musique" , myPhone: "Mon numéro :"
+        sound: "Son", muted: "Muet", notMuted: "Activé", languages: "Langues" , options : "Options" , about: "À propos" , news: "Actualités" , buyCoffee: "Offrez-moi un café", selectPay: "Choisir un mode de paiement", close: "Fermer" , goTo: "Aller à" , aboutTitle: "À propos", ownerTitle: "Propriétaire et programmeur du site", musicTitle: "Propriétaire de la musique" , myPhone: "Mon numéro :" , anonymousTitle: "Envoyez-moi un message anonyme !", anonymousText: "Votre message sera anonyme. Je le recevrai par e-mail :)", anonymousPlaceholder: "Écrivez votre message ici...", send: "Envoyer"
     },  
     es: {
-        sound: "Sonido", muted: "Silenciado", notMuted: "Activado", languages: "Idiomas" , options: "Opciones" , about: "Acerca de" , news: "Noticias" , buyCoffee: "Invítame a un café", selectPay: "Seleccionar método de pago", close: "Cerrar" , goTo: "Ir a" , aboutTitle: "Acerca de", ownerTitle: "Propietario y programador del sitio", musicTitle: "Propietario de la música" , myPhone: "Mi número :"
+        sound: "Sonido", muted: "Silenciado", notMuted: "Activado", languages: "Idiomas" , options: "Opciones" , about: "Acerca de" , news: "Noticias" , buyCoffee: "Invítame a un café", selectPay: "Seleccionar método de pago", close: "Cerrar" , goTo: "Ir a" , aboutTitle: "Acerca de", ownerTitle: "Propietario y programador del sitio", musicTitle: "Propietario de la música" , myPhone: "Mi número :" ,  anonymousTitle: "¡Envíame un mensaje anónimo!", anonymousText: "Tu mensaje será anónimo. Lo recibiré por correo electrónico :)", anonymousPlaceholder: "Escribe tu mensaje aquí...", send: "Enviar"
  },
     ru: {
-        sound: "Звук", muted: "Выключен", notMuted: "Включен", languages: "Языки" , options: "Настройки" , about: "О сайте" , news: "Новости" , buyCoffee: "Купить мне кофе", selectPay: "Выберите способ оплаты", close: "Закрыть" , goTo: "Перейти на" , aboutTitle: "О сайте", ownerTitle: "Владелец и разработчик сайта", musicTitle: "Автор музыки" ,  myPhone: "Мой номер телефона:"
+        sound: "Звук", muted: "Выключен", notMuted: "Включен", languages: "Языки" , options: "Настройки" , about: "О сайте" , news: "Новости" , buyCoffee: "Купить мне кофе", selectPay: "Выберите способ оплаты", close: "Закрыть" , goTo: "Перейти на" , aboutTitle: "О сайте", ownerTitle: "Владелец и разработчик сайта", musicTitle: "Автор музыки" ,  myPhone: "Мой номер телефона:" ,   anonymousTitle: "Отправьте мне анонимное сообщение!", anonymousText: "Ваше сообщение будет анонимным. Я получу его по электронной почте :)", anonymousPlaceholder: "Напишите ваше сообщение здесь..." , send: "Отправить"
     },
-
     ar: {
-        sound: "الصوت", muted: "مكتوم", notMuted: "غير مكتوم", languages: "اللغات" , options: "الإعدادات" , about: "حول الموقع" , news: "الأخبار" , buyCoffee: "ادعمني بفنجان قهوة", selectPay: "اختر وسيلة الدفع", close: "إغلاق" , goTo: "الانتقال إلى" , aboutTitle: "حول الموقع", ownerTitle: "مالك ومبرمج الموقع", musicTitle: "صاحب الموسيقى" ,   myPhone: "رقم هاتفي :"
+        sound: "الصوت", muted: "مكتوم", notMuted: "غير مكتوم", languages: "اللغات" , options: "الإعدادات" , about: "حول الموقع" , news: "الأخبار" , buyCoffee: "ادعمني بفنجان قهوة", selectPay: "اختر وسيلة الدفع", close: "إغلاق" , goTo: "الانتقال إلى" , aboutTitle: "حول الموقع", ownerTitle: "مالك ومبرمج الموقع", musicTitle: "صاحب الموسيقى" ,   myPhone: "رقم هاتفي :" ,   anonymousTitle: "أرسل لي رسالة مجهولة!", anonymousText: "ستكون رسالتك مجهولة. سأستلمها عبر البريد الإلكتروني :)", anonymousPlaceholder: "اكتب رسالتك هنا...", send: "إرسال"
     } 
 };
+
     const navText = {
     en: {
         home: "Home", games: "Games", books: "Business", articles: "Articles" , news: "News"
-
     },
     fr: {
         home: "Accueil", games: "Jeux", books: "Entreprise", articles: "Articles" , news: "Actualités"
-
     },
     es: {
         home: "Inicio", games: "Juegos", books: "Negocio", articles: "Artículos" , news: "Noticias"
-
     },
     ru: { home: "Главная", games: "Игры", books: "Бизнес", articles: "Статьи" , news: "Новости"
-
     },
     ar: {
         home: "الرئيسية", games: "الألعاب", books: "الأعمال", articles: "المقالات" , news: "الأخبار"
@@ -173,7 +169,7 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
 <div className = "language-container">
     <button className = "anonymous-btn" onClick={() => {
         playMusic(); playClick(); setShowLanguages(false); setShowAnonymous(true);
-    }}>Anonymous Message</button>
+    }}>{sidebarText[language].anonymousButton}</button>
     </div>
     {
         showAbout && ( <div className="about-overlay"> <div className="about-modal">
@@ -190,14 +186,14 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
                             showAnonymous && (
                                 <div className="about-overlay">
                                 <div className="about-modal anonymous-modal">
-                                    <h2>Send me an Anonymous Message!</h2>
-                                    <p>Your message will be anonymous.<br/>I will receive it via email :) </p>
-                                    <textarea className = "anonymous-textbox" placeholder="Write your message here..." />
+                                    <h2>{sidebarText[language].anonymousTitle}</h2>
+                                    <p>{sidebarText[language].anonymousTitle}<br/> {sidebarText[language].anonymousText} </p>
+                                    <textarea className = "anonymous-textbox" placeholder={sidebarText[language].anonymousPlaceholder} />
                                     <div className = "anonymous-actions">
-                                        <button className = "send-anonymous-btn">Send</button>
+                                        <button className = "send-anonymous-btn">{sidebarText[language].send}</button>
                                         <button className="close-about-btn" onClick= { () => {
                                             playMusic(); playClick(); setShowAnonymous(false);
-                                        }}>Close</button>
+                                        }}>{sidebarText[language].close}</button>
                                         </div>
                                         </div>
                                         </div>
