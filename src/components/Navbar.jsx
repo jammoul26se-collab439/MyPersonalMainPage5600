@@ -10,6 +10,7 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
     const [showPayModes , setShowPayModes] = useState(false);
     const [payMode , setPayMode] = useState("");
     const [showAnonymous , setShowAnonymous] = useState(false);
+    const [anonymousMessage , setAnonymousMessage] = useState("");
     const sidebarText = {
     en: {
         sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages" , options: "Options" , about: "About" , news: "News" , buyCoffee : "Buy Me a Coffee" , selectPay: "Select Pay Mode" , close : "Close" , goTo: "Go to" , aboutTitle: "About", ownerTitle: "Owner & Programmer of the Site", musicTitle: "Music Owner" , myPhone: "My Phone Number :" , anonymousTitle: "Send me an Anonymous Message!", anonymousText: "Your message will be anonymous. I will receive it via email :)", anonymousPlaceholder: "Write your message here..." , send: "Send" ,  anonymousButton: "Anonymous Message"
@@ -44,6 +45,28 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
         home: "الرئيسية", games: "الألعاب", books: "الأعمال", articles: "المقالات" , news: "الأخبار"
     }
 };
+const sendAnonymousMessage = async () => {
+    if(anonymousMessage.trim() === "") {
+        alert("Please Write a Message");
+        return;
+    }
+    const response = await fetch("https://api.web3forms.com/submit" , {
+        method: "POST" , 
+        headers: {
+            "Content-Type" : "application/json"
+        } ,
+        body : JSON.stringify({ access_key: "bb1f7e15-837b-4736-a479-9c92600e4c47" , message: anonymousMessage , subject: "New Anonymous Message"} , from_name: "Anonymous Visitor")
+    }
+);
+const result = await response.json();
+if(result.success) {
+    alert("Message sent successfully :)");
+        setAnonymousMessage("");
+        setShowAnonymous(false);
+}
+else 
+    alert("Failed");
+}
  return(
     <>
      <nav>
@@ -187,10 +210,10 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
                                 <div className="about-overlay">
                                 <div className="about-modal anonymous-modal">
                                     <h2>{sidebarText[language].anonymousTitle}</h2>
-                                    <p>{sidebarText[language].anonymousTitle}<br/> {sidebarText[language].anonymousText} </p>
-                                    <textarea className = "anonymous-textbox" placeholder={sidebarText[language].anonymousPlaceholder} />
+                                    <p>{sidebarText[language].anonymousText}</p>
+                                    <textarea className="anonymous-textbox" placeholder={sidebarText[language].anonymousPlaceholder} value = {anonymousMessage} onChange = { (e) => setAnonymousMessage(e.target.value)} />
                                     <div className = "anonymous-actions">
-                                        <button className = "send-anonymous-btn">{sidebarText[language].send}</button>
+                                        <button className = "send-anonymous-btn" onClick={sendAnonymousMessage}>{sidebarText[language].send}</button>
                                         <button className="close-about-btn" onClick= { () => {
                                             playMusic(); playClick(); setShowAnonymous(false);
                                         }}>{sidebarText[language].close}</button>
