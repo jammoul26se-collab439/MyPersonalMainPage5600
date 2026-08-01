@@ -480,5 +480,8 @@ nav a:hover {
         padding: 0;
         font-size: 14px;
     }
+    .anonymous-actions .close-about-btn {
+        margin-top:0;
+    }
 }
 
