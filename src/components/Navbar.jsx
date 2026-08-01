@@ -13,19 +13,34 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
     const [anonymousMessage , setAnonymousMessage] = useState("");
     const sidebarText = {
     en: {
-        sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages" , options: "Options" , about: "About" , news: "News" , buyCoffee : "Buy Me a Coffee" , selectPay: "Select Pay Mode" , close : "Close" , goTo: "Go to" , aboutTitle: "About", ownerTitle: "Owner & Programmer of the Site", musicTitle: "Music Owner" , myPhone: "My Phone Number :" , anonymousTitle: "Send me an Anonymous Message!", anonymousText: "Your message will be anonymous. I will receive it via email :)", anonymousPlaceholder: "Write your message here..." , send: "Send" ,  anonymousButton: "Anonymous Message"
-},
+        sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages" , options: "Options" , about: "About" , news: "News" , buyCoffee : "Buy Me a Coffee" , selectPay: "Select Pay Mode" , close : "Close" , goTo: "Go to" , aboutTitle: "About", ownerTitle: "Owner & Programmer of the Site", musicTitle: "Music Owner" , myPhone: "My Phone Number :" , anonymousTitle: "Send me an Anonymous Message!", anonymousText: "Your message will be anonymous. I will receive it via email :)", anonymousPlaceholder: "Write your message here..." , send: "Send" ,  anonymousButton: "Anonymous Message" ,
+        alerts: {
+    writeMessage: "Please Write a Message", success: "Message sent successfully :)", failed: "Failed", error: "Something went wrong"
+        }
+    },
     fr: {
-        sound: "Son", muted: "Muet", notMuted: "Activé", languages: "Langues" , options : "Options" , about: "À propos" , news: "Actualités" , buyCoffee: "Offrez-moi un café", selectPay: "Choisir un mode de paiement", close: "Fermer" , goTo: "Aller à" , aboutTitle: "À propos", ownerTitle: "Propriétaire et programmeur du site", musicTitle: "Propriétaire de la musique" , myPhone: "Mon numéro :" , anonymousTitle: "Envoyez-moi un message anonyme !", anonymousText: "Votre message sera anonyme. Je le recevrai par e-mail :)", anonymousPlaceholder: "Écrivez votre message ici...", send: "Envoyer" , anonymousButton: "Message anonyme"
+        sound: "Son", muted: "Muet", notMuted: "Activé", languages: "Langues" , options : "Options" , about: "À propos" , news: "Actualités" , buyCoffee: "Offrez-moi un café", selectPay: "Choisir un mode de paiement", close: "Fermer" , goTo: "Aller à" , aboutTitle: "À propos", ownerTitle: "Propriétaire et programmeur du site", musicTitle: "Propriétaire de la musique" , myPhone: "Mon numéro :" , anonymousTitle: "Envoyez-moi un message anonyme !", anonymousText: "Votre message sera anonyme. Je le recevrai par e-mail :)", anonymousPlaceholder: "Écrivez votre message ici...", send: "Envoyer" , anonymousButton: "Message anonyme" ,
+        alerts: {
+    writeMessage: "Veuillez écrire un message", success: "Message envoyé avec succès :)", failed: "Échec", error: "Quelque chose s'est mal passé"
+       }
     },  
     es: {
-        sound: "Sonido", muted: "Silenciado", notMuted: "Activado", languages: "Idiomas" , options: "Opciones" , about: "Acerca de" , news: "Noticias" , buyCoffee: "Invítame a un café", selectPay: "Seleccionar método de pago", close: "Cerrar" , goTo: "Ir a" , aboutTitle: "Acerca de", ownerTitle: "Propietario y programador del sitio", musicTitle: "Propietario de la música" , myPhone: "Mi número :" ,  anonymousTitle: "¡Envíame un mensaje anónimo!", anonymousText: "Tu mensaje será anónimo. Lo recibiré por correo electrónico :)", anonymousPlaceholder: "Escribe tu mensaje aquí...", send: "Enviar" , anonymousButton: "Mensaje anónimo"
- },
+        sound: "Sonido", muted: "Silenciado", notMuted: "Activado", languages: "Idiomas" , options: "Opciones" , about: "Acerca de" , news: "Noticias" , buyCoffee: "Invítame a un café", selectPay: "Seleccionar método de pago", close: "Cerrar" , goTo: "Ir a" , aboutTitle: "Acerca de", ownerTitle: "Propietario y programador del sitio", musicTitle: "Propietario de la música" , myPhone: "Mi número :" ,  anonymousTitle: "¡Envíame un mensaje anónimo!", anonymousText: "Tu mensaje será anónimo. Lo recibiré por correo electrónico :)", anonymousPlaceholder: "Escribe tu mensaje aquí...", send: "Enviar" , anonymousButton: "Mensaje anónimo" , 
+        alerts: {
+    writeMessage: "Por favor escribe un mensaje",  success: "Mensaje enviado correctamente :)", failed: "Fallido", error: "Algo salió mal"
+      }
+    },
     ru: {
-        sound: "Звук", muted: "Выключен", notMuted: "Включен", languages: "Языки" , options: "Настройки" , about: "О сайте" , news: "Новости" , buyCoffee: "Купить мне кофе", selectPay: "Выберите способ оплаты", close: "Закрыть" , goTo: "Перейти на" , aboutTitle: "О сайте", ownerTitle: "Владелец и разработчик сайта", musicTitle: "Автор музыки" ,  myPhone: "Мой номер телефона:" ,   anonymousTitle: "Отправьте мне анонимное сообщение!", anonymousText: "Ваше сообщение будет анонимным. Я получу его по электронной почте :)", anonymousPlaceholder: "Напишите ваше сообщение здесь..." , send: "Отправить" ,  anonymousButton: "Анонимное сообщение"
+        sound: "Звук", muted: "Выключен", notMuted: "Включен", languages: "Языки" , options: "Настройки" , about: "О сайте" , news: "Новости" , buyCoffee: "Купить мне кофе", selectPay: "Выберите способ оплаты", close: "Закрыть" , goTo: "Перейти на" , aboutTitle: "О сайте", ownerTitle: "Владелец и разработчик сайта", musicTitle: "Автор музыки" ,  myPhone: "Мой номер телефона:" ,   anonymousTitle: "Отправьте мне анонимное сообщение!", anonymousText: "Ваше сообщение будет анонимным. Я получу его по электронной почте :)", anonymousPlaceholder: "Напишите ваше сообщение здесь..." , send: "Отправить" ,  anonymousButton: "Анонимное сообщение" ,
+        alerts: {
+    writeMessage: "Пожалуйста, напишите сообщение", success: "Сообщение успешно отправлено :)", failed: "Ошибка", error: "Что-то пошло не так"
+     }
     },
     ar: {
-        sound: "الصوت", muted: "مكتوم", notMuted: "غير مكتوم", languages: "اللغات" , options: "الإعدادات" , about: "حول الموقع" , news: "الأخبار" , buyCoffee: "ادعمني بفنجان قهوة", selectPay: "اختر وسيلة الدفع", close: "إغلاق" , goTo: "الانتقال إلى" , aboutTitle: "حول الموقع", ownerTitle: "مالك ومبرمج الموقع", musicTitle: "صاحب الموسيقى" ,   myPhone: "رقم هاتفي :" ,   anonymousTitle: "أرسل لي رسالة مجهولة!", anonymousText: "ستكون رسالتك مجهولة. سأستلمها عبر البريد الإلكتروني :)", anonymousPlaceholder: "اكتب رسالتك هنا...", send: "إرسال" ,   anonymousButton: "رسالة مجهولة"
+        sound: "الصوت", muted: "مكتوم", notMuted: "غير مكتوم", languages: "اللغات" , options: "الإعدادات" , about: "حول الموقع" , news: "الأخبار" , buyCoffee: "ادعمني بفنجان قهوة", selectPay: "اختر وسيلة الدفع", close: "إغلاق" , goTo: "الانتقال إلى" , aboutTitle: "حول الموقع", ownerTitle: "مالك ومبرمج الموقع", musicTitle: "صاحب الموسيقى" ,   myPhone: "رقم هاتفي :" ,   anonymousTitle: "أرسل لي رسالة مجهولة!", anonymousText: "ستكون رسالتك مجهولة. سأستلمها عبر البريد الإلكتروني :)", anonymousPlaceholder: "اكتب رسالتك هنا...", send: "إرسال" ,   anonymousButton: "رسالة مجهولة" ,
+        alerts: {
+         writeMessage: "يرجى كتابة رسالة", success: "تم إرسال الرسالة بنجاح :)", failed: "فشل الإرسال", error: "حدث خطأ ما"
+     }
     } 
 };
 
@@ -47,7 +62,7 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
 };
 const sendAnonymousMessage = async () => {
     if(anonymousMessage.trim() === "") {
-        alert("Please Write a Message");
+        alert(sidebarText[language].alerts.writeMessage);
         return;
     }
     try {
@@ -61,15 +76,15 @@ const sendAnonymousMessage = async () => {
 );
 const result = await response.json();
 if(result.success) {
-    alert("Message sent successfully :)");
+    alert(sidebarText[language].alerts.success);
         setAnonymousMessage("");
         setShowAnonymous(false);
 }
 else 
-    alert("Failed");
+    alert(sidebarText[language].alerts.failed);
 }
  catch(error) {
-        alert("Something went wrong");
+        alert(sidebarText[language].alerts.error);
     }
 }
  return(
