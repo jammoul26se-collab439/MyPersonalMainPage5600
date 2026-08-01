@@ -50,12 +50,13 @@ const sendAnonymousMessage = async () => {
         alert("Please Write a Message");
         return;
     }
-    const response = await fetch("https://api.web3forms.com/submit" , {
+    try {
+        const response = await fetch("https://api.web3forms.com/submit" , {
         method: "POST" , 
         headers: {
             "Content-Type" : "application/json"
         } ,
-        body : JSON.stringify({ access_key: "bb1f7e15-837b-4736-a479-9c92600e4c47" , message: anonymousMessage , subject: "New Anonymous Message"} , from_name: "Anonymous Visitor")
+        body : JSON.stringify({ access_key: "bb1f7e15-837b-4736-a479-9c92600e4c47" , message: anonymousMessage , subject: "New Anonymous Message" , from_name: "Anonymous Visitor" })
     }
 );
 const result = await response.json();
@@ -66,6 +67,10 @@ if(result.success) {
 }
 else 
     alert("Failed");
+}
+ catch(error) {
+        alert("Something went wrong");
+    }
 }
  return(
     <>
@@ -213,7 +218,9 @@ else
                                     <p>{sidebarText[language].anonymousText}</p>
                                     <textarea className="anonymous-textbox" placeholder={sidebarText[language].anonymousPlaceholder} value = {anonymousMessage} onChange = { (e) => setAnonymousMessage(e.target.value)} />
                                     <div className = "anonymous-actions">
-                                        <button className = "send-anonymous-btn" onClick={sendAnonymousMessage}>{sidebarText[language].send}</button>
+                                        <button className = "send-anonymous-btn" onClick={ () => {
+                                            playMusic(); playClick(); sendAnonymousMessage()
+                                        }}>{sidebarText[language].send}</button>
                                         <button className="close-about-btn" onClick= { () => {
                                             playMusic(); playClick(); setShowAnonymous(false);
                                         }}>{sidebarText[language].close}</button>
