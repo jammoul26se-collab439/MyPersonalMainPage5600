@@ -340,7 +340,9 @@ nav a:hover {
     cursor: pointer;
     font-weight: bold;
 }
-
+.anonymous-actions .close-about-btn {
+    margin-top:0;
+}
 .close-about-btn:hover {
     background: #b91c1c;
 }
