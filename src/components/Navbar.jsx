@@ -9,6 +9,7 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
     const [showDonate , setShowDonate] = useState(false);
     const [showPayModes , setShowPayModes] = useState(false);
     const [payMode , setPayMode] = useState("");
+    const [showAnonymous , setShowAnonymous] = useState(false);
     const sidebarText = {
     en: {
         sound: "Sound", muted: "Muted", notMuted: "Not Muted", languages: "Languages" , options: "Options" , about: "About" , news: "News" , buyCoffee : "Buy Me a Coffee" , selectPay: "Select Pay Mode" , close : "Close" , goTo: "Go to" , aboutTitle: "About", ownerTitle: "Owner & Programmer of the Site", musicTitle: "Music Owner" , myPhone: "My Phone Number :"
@@ -169,6 +170,11 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
 )} 
 
 </div>
+<div className = "language-container">
+    <button className = "anonymous-btn" onClick={() => {
+        playMusic(); playClick(); setShowLanguages(false); setShowAnonymous(true);
+    }}>Anonymous Message</button>
+    </div>
     {
         showAbout && ( <div className="about-overlay"> <div className="about-modal">
                           <h2>{sidebarText[language].aboutTitle}</h2>
@@ -180,6 +186,23 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
                               </div>
                           )}
                           </div>
+                          {
+                            showAnonymous && (
+                                <div className="about-overlay">
+                                <div className="about-modal" anonymous-modal>
+                                    <h2>Send me an Anonymous Message!</h2>
+                                    <p>Your message will be anonymous.<br/>I will receive it via email :) </p>
+                                    <textarea className = "anonymous-textbox" placeholder="Write your message here..." />
+                                    <div className = "anonymous-actions">
+                                        <div className = "send-anonymous-btn">Send</button>
+                                        <button className="close-about-btn" onClick= { () => {
+                                            playMusic(); playClick(); setShowAnonymous(false);
+                                        }}>Close</button>
+                                        </div>
+                                        </div>
+                                        </div>
+                            )
+                          }
     </>
  );
 }
