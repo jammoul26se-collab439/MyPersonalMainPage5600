@@ -467,5 +467,11 @@ nav a:hover {
     .go-pay-btn {
         margin-top: 15px;
     }
+    .anonymous-actions button {
+        width: 90px;
+        height: 38px;
+        padding: 0;
+        font-size: 14px;
+    }
 }
 
