@@ -189,12 +189,12 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
                           {
                             showAnonymous && (
                                 <div className="about-overlay">
-                                <div className="about-modal" anonymous-modal>
+                                <div className="about-modal anonymous-modal">
                                     <h2>Send me an Anonymous Message!</h2>
                                     <p>Your message will be anonymous.<br/>I will receive it via email :) </p>
                                     <textarea className = "anonymous-textbox" placeholder="Write your message here..." />
                                     <div className = "anonymous-actions">
-                                        <div className = "send-anonymous-btn">Send</button>
+                                        <button className = "send-anonymous-btn">Send</button>
                                         <button className="close-about-btn" onClick= { () => {
                                             playMusic(); playClick(); setShowAnonymous(false);
                                         }}>Close</button>
