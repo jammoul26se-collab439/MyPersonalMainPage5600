@@ -414,7 +414,9 @@ nav a:hover {
 }
 @media (max-width: 768px) {
     nav {
-        padding: 10px 22px;
+        padding-left: 30px;
+        padding-right: 30px;
+       /* padding: 10px 22px;*/
         display: flex;
         justify-content: space-between;
         align-items: center;
