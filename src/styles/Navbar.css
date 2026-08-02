@@ -414,13 +414,21 @@ nav a:hover {
 }
 @media (max-width: 768px) {
     nav {
-        padding-left: 30px;
-        padding-right: 30px;
-       /* padding: 10px 22px;*/
+        width: calc(100% + 20px);
+        margin-left: -10px;
+        padding: 10px 14px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: nowrap;
+        box-sizing: border-box;
+      /*  padding-left: 30px; 
+        padding-right: 30px; */
+       /* padding: 10px 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap; */
     }
     .nav-left{
         gap: 8px;
