@@ -19,7 +19,6 @@ body {
     }
     .page {
         padding: 0px 8px 15px 0px;
-        margin-top: -10px;
         min-height: calc(100vh - 60px);
     }
 }
