@@ -1,24 +1,33 @@
 body {
     overflow-y: scroll;
 }
+.earth-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
 .page-content {
-    background-image: url("/Earth.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    min-height: calc(100vh - 70px);
+    position: relative;
+}
+.page {
     min-height: calc(100vh - 70px);
 }
-
-.page {
-    min-height : calc(100vh - 70px);
-}
-
-@media (max-width: 768px) {
+@media(max-width:768px) {
     .page-content {
         min-height: calc(100vh - 60px);
     }
     .page {
-        padding: 0px 8px 15px 0px;
         min-height: calc(100vh - 60px);
     }
+    .earth-background {
+        object-position: center center;
+    }
 }
+
+

@@ -64,8 +64,12 @@ function App() {
     <BrowserRouter>
     <audio ref={musicRef} loop preload="auto">
       <source src="/mainmusic.mp4" type="audio/mp4" />
-      </audio>
+      </audio> 
+      
     <Navbar muted={muted} setMuted={setMuted} language={language} setLanguage={setLanguage} playMusic={playMusic} />
+   <video className="earth-background" autoPlay loop muted playsInline>
+      <source src="/Earth.mp4" type="video/mp4" />
+      </video>
     <div className ="page-content">
     <Routes>
       <Route path = "/" element={<Home language={language} playMusic={playMusic}/>}/>
