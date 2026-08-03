@@ -360,6 +360,19 @@ nav a:hover {
     border-radius: 8px;
     cursor: pointer;
     transition: .3s;
+    background: #0eabe9;
+    color:white;
+}
+
+.anonymous-btn1 {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
     background: #d0e90e;
     color:white;
 }

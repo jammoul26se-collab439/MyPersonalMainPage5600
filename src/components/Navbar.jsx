@@ -223,7 +223,7 @@ else
     }}>{sidebarText[language].anonymousButton}</button>
     </div>
 <div className = "language-container">
-    <button className = "anonymous-btn" onClick = { () => { playMusic(); playClick(); setShowLanguages(false); setShowQR(true);}}>{sidebarText[language].qrButton}</button>
+    <button className = "anonymous-btn1" onClick = { () => { playMusic(); playClick(); setShowLanguages(false); setShowQR(true);}}>{sidebarText[language].qrButton}</button>
     </div>
     {
         showAbout && ( <div className="about-overlay"> <div className="about-modal">
