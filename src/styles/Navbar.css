@@ -412,6 +412,29 @@ nav a:hover {
     padding: 0;
     font-size: 14px;
 }
+.qr-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+    background: #f59e0b;
+    color: white;
+}
+
+.qr-btn:hover {
+    background: #d97706;
+}
+
+.qr-image {
+    width: 220px;
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 15px 0;
+}
 @media (max-width: 768px) {
     nav {
         width: calc(100% + 20px);
@@ -422,13 +445,6 @@ nav a:hover {
         align-items: center;
         flex-wrap: nowrap;
         box-sizing: border-box;
-      /*  padding-left: 30px; 
-        padding-right: 30px; */
-       /* padding: 10px 22px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap; */
     }
     .nav-left{
         gap: 8px;
