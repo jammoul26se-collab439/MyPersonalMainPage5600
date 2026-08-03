@@ -99,16 +99,6 @@ Disfruto creando proyectos reales, aprendiendo nuevas tecnologías, mejorando mi
                 </div>
             </>
         )}
-        {page === 2 && (
-            <>
-                <div className="about">
-                    <h2 className="section-title">Page 2</h2>
-                    <pre className="game-description">
-                        Coming soon...
-                    </pre>
-                </div>
-            </>
-        )}
         <div className="games-navigation">
             <button className="page-button" disabled={page === 1} onClick={() => setPage(page - 1)}>{homeText[language].prev}</button>
             <button className="page-button" disabled={page === 2} onClick={() => setPage(page + 1)}>{homeText[language].next}</button>
