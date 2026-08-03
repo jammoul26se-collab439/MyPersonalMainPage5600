@@ -1,7 +1,8 @@
 import "../styles/Home.css";
 import { playClick } from "../util/playClick";
-
+import { useState } from "react";
 function Home({ language , playMusic }) {
+    const [page , setPage] = useState(1);
   const homeText = {
     en: {
         about: "About Javad",
@@ -13,7 +14,9 @@ I enjoy building real-world projects, learning new technologies, improving my sk
         facebook: "Facebook",
         instagram: "Instagram",
         tiktok: "TikTok",
-        whatsapp: "WhatsApp Channel"
+        whatsapp: "WhatsApp Channel" ,
+        prev: "Prev" ,
+        next: "Next" 
     },
 
     fr: {
@@ -26,7 +29,9 @@ J'aime créer des projets réels, apprendre de nouvelles technologies, améliore
         facebook: "Facebook",
         instagram: "Instagram",
         tiktok: "TikTok",
-        whatsapp: "Chaîne WhatsApp"
+        whatsapp: "Chaîne WhatsApp" ,
+        prev: "Précédent",
+        next: "Suivant"
     },
 
     es: {
@@ -39,7 +44,9 @@ Disfruto creando proyectos reales, aprendiendo nuevas tecnologías, mejorando mi
         facebook: "Facebook",
         instagram: "Instagram",
         tiktok: "TikTok",
-        whatsapp: "Canal de WhatsApp"
+        whatsapp: "Canal de WhatsApp" ,
+        prev: "Anterior",
+        next: "Siguiente"
     },
 
     ru: {
@@ -52,7 +59,9 @@ Disfruto creando proyectos reales, aprendiendo nuevas tecnologías, mejorando mi
         facebook: "Facebook",
         instagram: "Instagram",
         tiktok: "TikTok",
-        whatsapp: "Канал WhatsApp"
+        whatsapp: "Канал WhatsApp" ,
+        prev: "Назад",
+        next: "Далее"
     },
 
     ar: {
@@ -65,35 +74,46 @@ Disfruto creando proyectos reales, aprendiendo nuevas tecnologías, mejorando mi
         facebook: "فيسبوك",
         instagram: "إنستغرام",
         tiktok: "تيك توك",
-        whatsapp: "قناة واتساب"
+        whatsapp: "قناة واتساب" ,
+        prev: "السابق",
+        next: "التالي"
     }
 };
     return(
-      <div className="about">
-         <div className="about"> 
-   <h2 className="section-title">{homeText[language].about}</h2>
-   <pre className="game-description">{homeText[language].description}</pre>
-   <br />
-   <br />
-   <h2 className = "section-title">{homeText[language].follow}</h2>
-   <div className="social-links">
-     <a href="https://youtube.com/@itsjawad-j4x?si=9R0ggTnSpcKa9gGI" onClick={ (e) => {
-      e.preventDefault();
-      playMusic();
-      playClick();
-      setTimeout(() => {
-        window.location.href="https://youtube.com/@itsjawad-j4x?si=9R0ggTnSpcKa9gGI";
-      }, 150);
-      }}>{homeText[language].youtube}</a> 
-     <a href="https://www.facebook.com/share/1UhfgXzhps/" onClick={playClick}>{homeText[language].facebook}</a> 
-     <a href="https://www.instagram.com/itsjavad5320?igsh=MXB5cnhmemRyZGZzYQ==" onClick={() => { playMusic(); playClick(); }}>{homeText[language].instagram}</a> 
-     <a href = "https://www.tiktok.com/@itsjavad135286?_r=1&_t=ZS-98CDjISN7Qa" onClick={() => { playMusic(); playClick();}}>{homeText[language].tiktok}</a> 
-     <a href = "https://whatsapp.com/channel/0029VbD8tq4B4hdYQMrKZ83G" onClick={() => {playMusic(); playClick(); }}>{homeText[language].whatsapp}</a>
-     </div>
-   </div>
-      </div>
-  
-   
-    );
+    <div className="page">
+        {page === 1 && (
+            <>
+                <div className="about">
+                    <h2 className="section-title">{homeText[language].about}</h2>
+                    <pre className="game-description">{homeText[language].description}</pre>
+                    <br />
+                    <br />
+                    <h2 className="section-title">{homeText[language].follow}</h2>
+                    <div className="social-links">
+                        <a href="https://youtube.com/@itsjawad-j4x?si=9R0ggTnSpcKa9gGI" onClick={(e)=>{ e.preventDefault(); playMusic(); playClick(); setTimeout(()=>{ window.location.href="https://youtube.com/@itsjawad-j4x?si=9R0ggTnSpcKa9gGI"; },150); }}>{homeText[language].youtube}</a>
+                        <a href="https://www.facebook.com/share/1UhfgXzhps/" onClick={()=>{ playMusic(); playClick(); }}>{homeText[language].facebook}</a>
+                        <a href="https://www.instagram.com/itsjavad5320?igsh=MXB5cnhmemRyZGZzYQ==" onClick={()=>{ playMusic(); playClick(); }}>{homeText[language].instagram}</a>
+                        <a href="https://www.tiktok.com/@itsjavad135286?_r=1&_t=ZS-98CDjISN7Qa" onClick={()=>{ playMusic(); playClick(); }}>{homeText[language].tiktok}</a>
+                        <a href="https://whatsapp.com/channel/0029VbD8tq4B4hdYQMrKZ83G" onClick={()=>{ playMusic(); playClick(); }}>{homeText[language].whatsapp}</a>
+                    </div>
+                </div>
+            </>
+        )}
+        {page === 2 && (
+            <>
+                <div className="about">
+                    <h2 className="section-title">Page 2</h2>
+                    <pre className="game-description">
+                        Coming soon...
+                    </pre>
+                </div>
+            </>
+        )}
+        <div className="games-navigation">
+            <button className="page-button" disabled={page === 1} onClick={() => setPage(page - 1)}>{homeText[language].prev}</button>
+            <button className="page-button" disabled={page === 2} onClick={() => setPage(page + 1)}>{homeText[language].next}</button>
+        </div>
+    </div>
+  );
 }
 export default Home;

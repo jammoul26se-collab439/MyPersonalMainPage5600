@@ -42,7 +42,7 @@ es: {
     snakeDescription:
 `Cada vez que comes una manzana, tu serpiente crece. Después de comer seis manzanas, aparece temporalmente un limón. Comerlo te da puntos extra. ¡Pero cuidado! Después de cada cinco manzanas aparece temporalmente una bomba. Si la tocas, perderás la partida. El juego incluye varias velocidades para la serpiente, cambio de idioma y una tienda donde puedes personalizar el color y la apariencia de la serpiente al alcanzar determinadas puntuaciones altas. Para una mejor experiencia en PC, se recomienda controlar la serpiente con las teclas de dirección del teclado en lugar de los botones Izquierda, Derecha, Arriba y Abajo que aparecen en la pantalla.`,
     snakeButton: "Jugar Crazy Snake" , 
-     prev: "Anterior",
+    prev: "Anterior",
     next: "Siguiente"
 },
 
