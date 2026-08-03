@@ -430,11 +430,18 @@ nav a:hover {
 }
 
 .qr-image {
+    display: block;
     width: 220px;
     max-width: 100%;
     border-radius: 10px;
-    margin: 15px 0;
+    margin: 20px auto;
 }
+
+.qr-modal .close-about-btn {
+    display:block;
+    margin: 20px auto 0;
+}
+
 @media (max-width: 768px) {
     nav {
         width: calc(100% + 20px);

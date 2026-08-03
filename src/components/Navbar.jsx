@@ -258,7 +258,7 @@ else
                           {
                             showQR && (
                                 <div className = "about-overlay">
-                                    <div className = "about-modal">
+                                    <div className = "about-modal qr-modal">
                                         <h2>{sidebarText[language].qrTitle}</h2>
                                         <img src="Logo.png" alt="QR Code" className = "qr-image" />
                                         <button className = "close-about-btn" onClick={() => {
