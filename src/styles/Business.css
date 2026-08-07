@@ -36,7 +36,7 @@
     border-color: #38bdf8;
 }
 
-.page .games-navigation {
+.page12 .games-navigation {
     display: flex;
     justify-content: flex-start;
     gap: 15px;
@@ -96,9 +96,9 @@
         line-height: 1.6;
     }
 
-.pages .games-navigation {
+.page12 .games-navigation {
     gap: 10px;
-    margin-top: -200px;
+    margin-top: -100px;
     justify-content: flex-start;
 }
 

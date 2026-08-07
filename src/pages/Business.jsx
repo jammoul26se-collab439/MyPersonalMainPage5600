@@ -42,7 +42,7 @@ function Business({language , playMusic , stopMusic}) {
     }
 };
    return (
-    <div className="page">
+    <div className="page12">
         {page === 1 && (
             <div className="page">
                 <h1 className="section-title1">{booksText[language].title}</h1>
