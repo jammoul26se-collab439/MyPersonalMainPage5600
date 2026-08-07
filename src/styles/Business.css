@@ -40,7 +40,7 @@
     display: flex;
     justify-content: flex-start;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .page-button {
@@ -98,7 +98,7 @@
 
 .games-navigation {
     gap: 10px;
-    margin-top: -10px;
+    margin-top: 10px;
     justify-content: flex-start;
 }
 
