@@ -40,7 +40,7 @@
     display: flex;
     justify-content: flex-start;
     gap: 15px;
-    margin-top: 10px;
+    margin-top: -200px;
 }
 
 .page-button {
@@ -96,9 +96,9 @@
         line-height: 1.6;
     }
 
-.games-navigation {
+.pages .games-navigation {
     gap: 10px;
-    margin-top: 10px;
+    margin-top: -120px;
     justify-content: flex-start;
 }
 
