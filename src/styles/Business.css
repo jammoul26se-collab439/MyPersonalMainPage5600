@@ -40,9 +40,12 @@
     display: flex;
     justify-content: flex-start;
     gap: 15px;
-    margin-top: -20px;
+    margin-top: 10px;
 }
 
+.page {
+    min-height: auto;
+}
 .page-button {
     background: #8b1e3f;
     color:white;
