@@ -101,8 +101,8 @@ return (
             </div>
         )}
         <div className="games-navigation">
-            <button className="page-button" disabled={page === 1} onClick={() => setPage(1)} > {gamesText[language].prev} </button>
-            <button className="page-button" disabled={page === 2} onClick={() => setPage(2)} > {gamesText[language].next}</button>
+            <button className="page-button" disabled={page === 1} onClick={() => { playMusic(); playClick(); setPage(1);} }> {gamesText[language].prev} </button>
+            <button className="page-button" disabled={page === 2} onClick={() => { playMusic(); playClick(); setPage(2);} }> {gamesText[language].next}</button>
         </div>
     </div>
  );

@@ -30,4 +30,21 @@ body {
     }
 }
 
+@media (max-width: 900px) and (min-width: 769px) {
+
+    .page-content {
+        min-height: calc(100vh - 65px);
+        padding: 0 25px;
+    }
+
+    .page {
+        min-height: calc(100vh - 65px);
+    }
+
+    .earth-background {
+        object-position: center center;
+    }
+
+}
+
 

@@ -66,8 +66,8 @@ function Business({language , playMusic , stopMusic}) {
             </div>
         )}
         <div className="games-navigation">
-            <button className="page-button" onClick={() => setPage(page - 1)} disabled={page === 1}>{booksText[language].prev}</button>
-            <button className="page-button" onClick={() => setPage(page + 1)} disabled={page === 2}>{booksText[language].next}</button>
+            <button className="page-button" onClick={() => { playMusic(); playClick(); setPage(page - 1);} }disabled={page === 1}>{booksText[language].prev}</button>
+            <button className="page-button" onClick={() => { playMusic(); playClick(); setPage(page + 1);} }disabled={page === 2}>{booksText[language].next}</button>
         </div>
     </>
 );

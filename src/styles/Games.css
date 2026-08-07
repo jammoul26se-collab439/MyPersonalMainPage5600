@@ -126,3 +126,41 @@
         padding: 4px 10px;
     }
 }
+
+@media (max-width: 900px) and (min-width: 769px) {
+
+    .game-card {
+        margin-bottom: 40px;
+    }
+
+    .game-title {
+        font-size: 25px;
+        padding: 7px 16px;
+    }
+
+    .game-description {
+        font-size: 17px;
+        line-height: 1.75;
+        max-width: 850px;
+    }
+
+    .game-button {
+        font-size: 14px;
+        padding: 11px 22px;
+    }
+
+    .games-page-placeholder {
+        min-height: 650px;
+    }
+
+    .games-navigation {
+        margin-top: 35px;
+        gap: 15px;
+    }
+
+    .page-button {
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+
+}

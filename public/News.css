@@ -269,9 +269,59 @@ h1 {
     }
 }
 
+@media (max-width: 900px) and (min-width: 769px) {
 
+    body {
+        padding: 30px 25px;
+    }
 
+    .top-buttons {
+        justify-content: flex-end;
+        gap: 12px;
+    }
 
+    .top-buttons button {
+        padding: 11px 20px;
+        font-size: 15px;
+    }
 
+    .container {
+        max-width: 100%;
+    }
 
+    h1 {
+        font-size: 28px;
+        padding: 18px;
+        margin-bottom: 30px;
+    }
 
+    .news-content {
+        gap: 25px;
+        padding: 25px;
+    }
+
+    .text p {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+    .image img {
+        max-width: 400px;
+        max-height: 600px;
+    }
+
+    .news-navigation {
+        margin-top: 35px;
+        gap: 18px;
+    }
+
+    .news-navigation button {
+        padding: 11px 30px;
+        font-size: 17px;
+    }
+
+    .modal-content {
+        max-width: 420px;
+    }
+
+}

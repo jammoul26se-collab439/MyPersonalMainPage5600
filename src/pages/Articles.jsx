@@ -28,8 +28,8 @@ function Articles( {language}) {
             </>
         )}
         <div className="games-navigation">
-            <button className="page-button" disabled={page === 1} onClick= { () => setPage(page - 1)}>{articlesText[language].prev}</button>
-            <button className="page-button" disabled={page === 2} onClick= { () => setPage(page + 1)}>{articlesText[language].next}</button>
+            <button className="page-button" disabled={page === 1} onClick= { () => { playMusic(); playClick(); setPage(page - 1);} }>{articlesText[language].prev}</button>
+            <button className="page-button" disabled={page === 2} onClick= { () => { playMusic(); playClick(); setPage(page + 1);} }>{articlesText[language].next}</button>
             </div>      
       </div>
     );

@@ -537,3 +537,61 @@ nav a:hover {
     }
 }
 
+@media (max-width: 900px) and (min-width: 769px) {
+
+    nav {
+        padding: 15px 25px;
+    }
+
+    nav h2 {
+        font-size: 22px;
+    }
+
+    nav ul {
+        gap: 18px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .menu-btn {
+        font-size: 26px;
+    }
+
+    .sidebar {
+        width: 300px;
+        left: -300px;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .sidebar-title {
+        font-size: 21px;
+    }
+
+    .language-menu,
+    .pay-menu {
+        min-width: 180px;
+    }
+
+    .sound-btn,
+    .language-btn,
+    .about-btn,
+    .news-btn,
+    .coffee-btn,
+    .pay-select-btn,
+    .go-pay-btn {
+        font-size: 15px;
+        padding: 11px;
+    }
+
+    .about-modal {
+        width: 380px;
+    }
+
+}
+
+

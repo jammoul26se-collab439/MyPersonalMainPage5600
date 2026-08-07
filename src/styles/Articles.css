@@ -64,3 +64,30 @@
         padding: 7px 0;
     }
 }
+
+
+@media (max-width: 900px) and (min-width: 769px) {
+
+    .articles-description {
+        font-size: 17px;
+        line-height: 1.7;
+        max-width: 850px;
+    }
+
+    .section-title {
+        font-size: 21px;
+        padding: 7px 16px;
+    }
+
+    .games-navigation {
+        margin-top: 35px;
+        gap: 15px;
+    }
+
+    .page-button {
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+
+}
+
