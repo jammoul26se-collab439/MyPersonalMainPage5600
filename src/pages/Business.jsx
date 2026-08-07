@@ -42,7 +42,7 @@ function Business({language , playMusic , stopMusic}) {
     }
 };
    return (
-    <>
+    <div className="page">
         {page === 1 && (
             <div className="page">
                 <h1 className="section-title1">{booksText[language].title}</h1>
@@ -69,7 +69,7 @@ function Business({language , playMusic , stopMusic}) {
             <button className="page-button" onClick={() => { playMusic(); playClick(); setPage(page - 1);} }disabled={page === 1}>{booksText[language].prev}</button>
             <button className="page-button" onClick={() => { playMusic(); playClick(); setPage(page + 1);} }disabled={page === 2}>{booksText[language].next}</button>
         </div>
-    </>
+    </div>
 );
 }
 
