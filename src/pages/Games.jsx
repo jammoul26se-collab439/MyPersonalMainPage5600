@@ -15,7 +15,13 @@ function Games({language , playMusic , stopMusic}) {
 `Every time you eat an apple, your snake grows longer. After eating six apples, a lemon appears temporarily. Eating it gives you bonus points. But be careful! After every five apples, a temporary bomb appears. If you touch it, you lose the game. The game includes multiple snake speeds, language switching, and a shop where you can customize the snake's color and appearance after reaching certain high scores.`,
         snakeButton: "Play Crazy Snake Game" , 
         prev: "Prev" ,
-        next: "Next" 
+        next: "Next" ,
+        chessTitle: "Chess Game",
+        chessDescription:
+`A game that combines tactics, brainpower, and strategic planning. It features three difficulty levels, a "Makhlouta" mode, and 1v1 gameplay. I've also added my own touches, including new sounds and custom rules in a special game mode.
+The AI plays against you according to the difficulty level you choose at the beginning of the game, while a timer limits the time available for each player's turn depending on the selected difficulty.
+This is the third web game I've created. Is the idea old? Yes. But with some special touches? Awesome!`,
+chessButton: "Play Chess Game" 
     },
 
 fr: {
@@ -29,7 +35,13 @@ fr: {
 `Chaque fois que vous mangez une pomme, votre serpent grandit. Après avoir mangé six pommes, un citron apparaît temporairement. Le manger vous rapporte des points bonus. Mais attention ! Toutes les cinq pommes, une bombe temporaire apparaît. Si vous la touchez, vous perdez la partie. Le jeu propose plusieurs vitesses de déplacement du serpent, le changement de langue et une boutique où vous pouvez personnaliser la couleur et l'apparence du serpent après avoir atteint certains scores élevés. Pour une meilleure expérience sur PC, il est recommandé de contrôler le serpent avec les touches fléchées du clavier plutôt qu'avec les boutons Gauche, Droite, Haut et Bas affichés à l'écran.`,
     snakeButton: "Jouer à Crazy Snake" , 
     prev: "Précédent",
-    next: "Suivant"
+    next: "Suivant",
+    chessTitle: "Jeu d'échecs",
+chessDescription:
+`Un jeu qui combine la stratégie, la réflexion et la planification. Il propose trois niveaux de difficulté, un mode "Makhlouta" et des parties en 1 contre 1. J'y ai également ajouté mes propres touches, notamment de nouveaux sons et des règles personnalisées dans un mode de jeu spécial.
+L'intelligence artificielle joue contre vous selon le niveau de difficulté que vous choisissez au début de la partie, tandis qu'un chronomètre limite le temps disponible pour le tour de chaque joueur en fonction du niveau sélectionné.
+Il s'agit du troisième jeu web que j'ai créé. L'idée est-elle ancienne ? Oui. Mais avec quelques touches spéciales ? Génial !`,
+chessButton: "Jouer aux échecs"
 },
 
 es: {
@@ -43,7 +55,13 @@ es: {
 `Cada vez que comes una manzana, tu serpiente crece. Después de comer seis manzanas, aparece temporalmente un limón. Comerlo te da puntos extra. ¡Pero cuidado! Después de cada cinco manzanas aparece temporalmente una bomba. Si la tocas, perderás la partida. El juego incluye varias velocidades para la serpiente, cambio de idioma y una tienda donde puedes personalizar el color y la apariencia de la serpiente al alcanzar determinadas puntuaciones altas. Para una mejor experiencia en PC, se recomienda controlar la serpiente con las teclas de dirección del teclado en lugar de los botones Izquierda, Derecha, Arriba y Abajo que aparecen en la pantalla.`,
     snakeButton: "Jugar Crazy Snake" , 
     prev: "Anterior",
-    next: "Siguiente"
+    next: "Siguiente",
+    chessTitle: "Juego de Ajedrez",
+chessDescription:
+`Un juego que combina táctica, inteligencia y planificación estratégica. Cuenta con tres niveles de dificultad, un modo "Makhlouta" y partidas 1 contra 1. También he añadido mis propios toques, incluyendo nuevos sonidos y reglas personalizadas en un modo de juego especial.
+La inteligencia artificial juega contra ti según el nivel de dificultad que elijas al comienzo de la partida, mientras que un temporizador limita el tiempo disponible para el turno de cada jugador según el nivel seleccionado.
+Este es el tercer juego web que he creado. ¿La idea es antigua? Sí. Pero con algunos toques especiales, ¿genial? ¡Por supuesto!`,
+chessButton: "Jugar al Ajedrez"
 },
 
 ru: {
@@ -57,7 +75,13 @@ ru: {
 `Каждый раз, когда вы съедаете яблоко, змейка становится длиннее. После шести съеденных яблок временно появляется лимон. Если съесть его, вы получите дополнительные очки. Но будьте осторожны! После каждых пяти яблок временно появляется бомба. Если вы коснётесь её, игра закончится поражением. В игре доступны несколько скоростей движения змейки, переключение языков и магазин, где можно изменить цвет и внешний вид змейки после достижения определённых высоких результатов. Для наилучшего игрового процесса на компьютере рекомендуется управлять змейкой с помощью клавиш-стрелок на клавиатуре, а не экранных кнопок Влево, Вправо, Вверх и Вниз.`,
     snakeButton: "Играть в Crazy Snake" ,
      prev: "Назад",
-     next: "Далее"
+     next: "Далее",
+     chessTitle: "Шахматная игра",
+     chessDescription:
+`Игра, сочетающая тактику, логику и стратегическое планирование. В ней доступны три уровня сложности, режим "Makhlouta" и игра один на один. Я также добавил свои собственные особенности, включая новые звуки и специальные правила в отдельном игровом режиме.
+Искусственный интеллект играет против вас в соответствии с выбранным в начале игры уровнем сложности, а таймер ограничивает время хода каждого игрока в зависимости от выбранного уровня.
+Это третья веб-игра, которую я создал. Идея старая? Да. Но с некоторыми особенными деталями? Отлично!`,
+chessButton: "Играть в шахматы"
 },
 
 ar: {
@@ -71,7 +95,13 @@ ar: {
 `في كل مرة تأكل فيها تفاحة، يزداد طول الثعبان. وبعد تناول ست تفاحات، تظهر ليمونة لفترة مؤقتة، وعند أكلها تحصل على نقاط إضافية. لكن انتبه! بعد كل خمس تفاحات تظهر قنبلة مؤقتة، وإذا اصطدمت بها تخسر اللعبة. تتضمن اللعبة عدة سرعات لحركة الثعبان، وإمكانية تغيير اللغة، بالإضافة إلى متجر يمكنك من خلاله تخصيص لون وشكل الثعبان بعد الوصول إلى نتائج مرتفعة معينة. ولأفضل تجربة على الكمبيوتر، يُنصح بالتحكم بالثعبان باستخدام أسهم لوحة المفاتيح بدلًا من أزرار اليسار واليمين والأعلى والأسفل الظاهرة على الشاشة.`,
     snakeButton: "العب الثعبان المجنون" , 
     prev: "السابق",
-    next: "التالي"
+    next: "التالي",
+    chessTitle: "لعبة الشطرنج",
+chessDescription:
+`لعبة تجمع بين التكتيك، والتفكير، والتخطيط الاستراتيجي. تتضمن ثلاثة مستويات من الصعوبة، ونمط "مخلوطة"، بالإضافة إلى اللعب واحد ضد واحد. كما أضفت إليها لمساتي الخاصة، بما في ذلك أصوات جديدة وقواعد مخصصة في نمط لعب خاص.
+يلعب الذكاء الاصطناعي ضدك وفقًا لمستوى الصعوبة الذي تختاره في بداية اللعبة، بينما يحدد المؤقت الوقت المتاح لدور كل لاعب بحسب مستوى الصعوبة المختار.
+هذه هي ثالث لعبة ويب أقوم بإنشائها. هل الفكرة قديمة؟ نعم. ولكن مع بعض اللمسات الخاصة؟ رائع!`,
+chessButton: "العب الشطرنج"
 }  
 
 };
@@ -96,8 +126,10 @@ return (
             </>
         )}
         {page === 2 && (
-            <div className="games-page-placeholder">
-                {/*New Games*/}
+            <div className="game-card">
+                <h2 className="game-title">{gamesText[language].chessTitle}</h2>
+                <p className="game-description">{gamesText[language].chessDescription}</p>
+                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"><button className="game-button" onClick={() => { stopMusic(); playClick(); }}>{gamesText[language].chessButton}</button></a>
             </div>
         )}
         <div className="games-navigation">

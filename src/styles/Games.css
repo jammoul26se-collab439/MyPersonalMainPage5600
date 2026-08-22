@@ -73,10 +73,10 @@
 .page-button:disabled {
     background: #8b1e3f;
     opacity: 0.4;
-    cursor: not-allowed;
+    cursor: default ;
 }
 
-.games-page-placeholder {
+.games-page-placeholder { /* Empty Page for new Pages*/
     min-height: 700px;
 }
 
