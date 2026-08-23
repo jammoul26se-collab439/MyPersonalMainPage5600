@@ -1,3 +1,10 @@
+.business-card {
+    margin-top : 50px;
+}
+.business-card:not(:last-child) {
+    margin-bottom: 50px;
+}
+
 .section-title1 {
   display: inline-block;
   font-size: 28px;
@@ -40,7 +47,7 @@
     display: flex;
     justify-content: flex-start;
     gap: 15px;
-    margin-top: -200px;
+    margin-top: 40px;
 }
 
 .page-button {
