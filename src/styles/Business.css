@@ -15,6 +15,9 @@
   border-radius: 8px;
   margin-top: 10px;
   margin-bottom: -10px;
+
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .game-description1 {
@@ -105,7 +108,7 @@
 
 .page12 .games-navigation {
     gap: 10px;
-    margin-top: -200px;
+    margin-top: 25px;
     justify-content: flex-start;
 }
 
@@ -134,8 +137,8 @@
         padding: 11px 22px;
     }
 
-    .games-navigation {
-        margin-top: 35px;
+    .page12 .games-navigation {
+        margin-top: 40px;
     }
 
     .page-button {
