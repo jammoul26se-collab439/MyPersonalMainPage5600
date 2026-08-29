@@ -129,7 +129,7 @@ return (
             <div className="game-card">
                 <h2 className="game-title">{gamesText[language].chessTitle}</h2>
                 <p className="game-description">{gamesText[language].chessDescription}</p>
-                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"><button className="game-button" onClick={() => { stopMusic(); playClick(); }}>{gamesText[language].chessButton}</button></a>
+                <a href="chess94393byjavad.jammoul26se.workers.dev" target="_blank" rel="noopener noreferrer"><button className="game-button" onClick={() => { stopMusic(); playClick(); }}>{gamesText[language].chessButton}</button></a>
             </div>
         )}
         <div className="games-navigation">
