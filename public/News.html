@@ -26,6 +26,20 @@
                  <img src="./BooksAnnoucement10.jpeg" alt="Books Annoucement">
             </div>
         </div>
+<h1 id="chess-news-title">Chess Game - War of Intelligence and Logic (03/09/2026)</h1>
+<div class="news-content" id="chess-news-content">
+    <div class="text">
+        <p id="chess-news-description">
+            A new project is here! After three weeks of continuous work, Chess Game - War of Intelligence and Logic is now ready. The game includes
+            multiple difficulty levels, sounds, different game modes, and many personal touches designed to make the experience more enjoyable. The
+            Hard AI is especially challenging, and defeating it will not be easy! This project represents a lot of effort, learning, and creativity,
+            and more improvements may come in the future.
+        </p>
+    </div>
+    <div class="image">
+        <img src="./ChessAnnoucement10.jpeg" alt="Chess Game Announcement">
+    </div>
+</div>
     </div>
     <div class="news-navigation">
         <button id="prevBtn" disabled>Prev</button>
@@ -49,77 +63,84 @@
             </div>
     </div>
     <script>
-
         const translations = {
-
     en: {
         title: "Programming Books Services - Opening Soon (29/07/2026)",
         description: `New news! The service of selling programming books will begin and be available online from the first month of September 2026. These books have been made with great love and effort, but their prices are very reasonable, especially after the price of basic resources for this business has increased. Eight programming books will now be displayed, and delivery service is available to all Lebanese territories. For any questions or complaints, please contact the owner via his number or through his account.`,
+        chessTitle: "Chess Game - War of Intelligence and Logic (03/09/2026)",
+        chessDescription: `The Chess Game project has been under continuous development for three weeks. It includes several difficulty levels, sound effects, music, and many personal touches added to make the experience unique. The game was designed to combine intelligence, logic, challenge, and fun. But be careful: defeating the Hard AI is not an easy task! Can you become the player who finally defeats it?`,
         options: "Options",
         return: "Return to Main Page",
         modalTitle: "Options",
         soundMuted: "Sound : Muted",
         soundNotMuted: "Sound : Not Muted",
         languages: "Languages",
-        close: "Close" ,
+        close: "Close",
         prev: "Prev",
         next: "Next"
     },
     fr: {
-    title: "Services de Livres de Programmation - Ouverture Prochaine (29/07/2026)",
-    description: `Grande nouvelle ! Le service de vente de livres de programmation commencera et sera disponible en ligne à partir du premier mois de septembre 2026. Ces livres ont été réalisés avec beaucoup de passion et d'efforts, mais leurs prix restent très raisonnables, surtout après l'augmentation du coût des ressources de base nécessaires à cette activité. Huit livres de programmation seront désormais proposés, et un service de livraison sera disponible dans tout le territoire libanais. Pour toute question ou réclamation, veuillez contacter le propriétaire via son numéro ou son compte.`,
-    options: "Options",
-    return: "Retour à la page principale",
-    modalTitle: "Options",
-    soundMuted: "Son : Coupé",
-    soundNotMuted: "Son : Activé",
-    languages: "Langues",
-    close: "Fermer" ,
-    prev: "Préc.",
-    next: "Suiv."
-},
-es: {
-    title: "Servicios de Libros de Programación - Próximamente (29/07/2026)",
-    description: `¡Buenas noticias! El servicio de venta de libros de programación comenzará y estará disponible en línea a partir del primer mes de septiembre de 2026. Estos libros han sido creados con mucho esfuerzo y dedicación, pero sus precios son muy razonables, especialmente después del aumento del costo de los recursos básicos para este trabajo. Ahora se ofrecerán ocho libros de programación y habrá servicio de entrega a todo el territorio libanés. Para cualquier consulta o reclamación, comuníquese con el propietario mediante su número o su cuenta.`,
-    options: "Opciones",
-    return: "Volver a la página principal",
-    modalTitle: "Opciones",
-    soundMuted: "Sonido : Silenciado",
-    soundNotMuted: "Sonido : Activado",
-    languages: "Idiomas",
-    close: "Cerrar" ,
-    prev: "Anterior",
-    next: "Siguiente"
-},
+        title: "Services de Livres de Programmation - Ouverture Prochaine (29/07/2026)",
+        description: `Grande nouvelle ! Le service de vente de livres de programmation commencera et sera disponible en ligne à partir du premier mois de septembre 2026. Ces livres ont été réalisés avec beaucoup de passion et d'efforts, mais leurs prix restent très raisonnables, surtout après l'augmentation du coût des ressources de base nécessaires à cette activité. Huit livres de programmation seront désormais proposés, et un service de livraison sera disponible dans tout le territoire libanais. Pour toute question ou réclamation, veuillez contacter le propriétaire via son numéro ou son compte.`,
+        chessTitle: "Jeu d'Échecs - Guerre d'Intelligence et de Logique (03/09/2026)",
+        chessDescription: `Le projet Chess Game a été développé continuellement pendant trois semaines. Il comprend plusieurs niveaux de difficulté, des effets sonores, de la musique ainsi que de nombreuses touches personnelles ajoutées pour rendre l'expérience unique. Le jeu a été conçu pour combiner intelligence, logique, défi et plaisir. Mais attention : vaincre l'IA en mode difficile n'est pas une tâche facile ! Saurez-vous devenir le joueur capable de la vaincre ?`,
+        options: "Options",
+        return: "Retour à la page principale",
+        modalTitle: "Options",
+        soundMuted: "Son : Coupé",
+        soundNotMuted: "Son : Activé",
+        languages: "Langues",
+        close: "Fermer",
+        prev: "Préc.",
+        next: "Suiv."
+    },
+    es: {
+        title: "Servicios de Libros de Programación - Próximamente (29/07/2026)",
+        description: `¡Buenas noticias! El servicio de venta de libros de programación comenzará y estará disponible en línea a partir del primer mes de septiembre de 2026. Estos libros han sido creados con mucho esfuerzo y dedicación, pero sus precios son muy razonables, especialmente después del aumento del costo de los recursos básicos para este trabajo. Ahora se ofrecerán ocho libros de programación y habrá servicio de entrega a todo el territorio libanés. Para cualquier consulta o reclamación, comuníquese con el propietario mediante su número o su cuenta.`,
+        chessTitle: "Juego de Ajedrez - Guerra de Inteligencia y Lógica (03/09/2026)",
+        chessDescription: `El proyecto Chess Game ha estado en desarrollo continuo durante tres semanas. Incluye varios niveles de dificultad, efectos de sonido, música y muchos detalles personales añadidos para crear una experiencia única. El juego fue diseñado para combinar inteligencia, lógica, desafío y diversión. Pero cuidado: ¡derrotar a la IA en dificultad difícil no es una tarea fácil! ¿Serás capaz de convertirte en el jugador que finalmente consiga vencerla?`,
+        options: "Opciones",
+        return: "Volver a la página principal",
+        modalTitle: "Opciones",
+        soundMuted: "Sonido : Silenciado",
+        soundNotMuted: "Sonido : Activado",
+        languages: "Idiomas",
+        close: "Cerrar",
+        prev: "Anterior",
+        next: "Siguiente"
+    },
+    ru: {
+        title: "Сервис книг по программированию - Скоро открытие (29/07/2026)",
+        description: `Хорошие новости! Сервис по продаже книг по программированию начнет работать и станет доступен онлайн с первого месяца сентября 2026 года. Эти книги были созданы с большой любовью и усилиями, но их цены остаются очень доступными, несмотря на рост стоимости основных ресурсов для этого проекта. Теперь будут представлены восемь книг по программированию, а доставка будет доступна по всей территории Ливана. По всем вопросам или жалобам, пожалуйста, свяжитесь с владельцем по его номеру телефона или через его аккаунт.`,
+        chessTitle: "Шахматная Игра - Война Интеллекта и Логики (03/09/2026)",
+        chessDescription: `Проект Chess Game непрерывно разрабатывался в течение трёх недель. В игре есть несколько уровней сложности, звуковые эффекты, музыка и множество личных деталей, добавленных для создания уникального игрового опыта. Игра создана для сочетания интеллекта, логики, испытаний и удовольствия. Но будьте осторожны: победить ИИ на сложном уровне совсем непросто! Сможете ли вы стать игроком, которому удастся наконец его победить?`,
+        options: "Настройки",
+        return: "Вернуться на главную страницу",
+        modalTitle: "Настройки",
+        soundMuted: "Звук : Выключен",
+        soundNotMuted: "Звук : Включен",
+        languages: "Языки",
+        close: "Закрыть",
+        prev: "Назад",
+        next: "Далее"
+    },
+    ar: {
+        title: "خدمات كتب البرمجة - الافتتاح قريبًا (29/07/2026)",
+        description: `خبر جديد! ستبدأ خدمة بيع كتب البرمجة وستصبح متاحة عبر الإنترنت اعتبارًا من الشهر الأول من سبتمبر 2026. لقد تم إعداد هذه الكتب بكل حب وجهد، ومع ذلك فإن أسعارها مناسبة جدًا، خاصة بعد ارتفاع تكلفة الموارد الأساسية اللازمة لهذا العمل. سيتم الآن عرض ثمانية كتب برمجية، كما ستتوفر خدمة التوصيل إلى جميع الأراضي اللبنانية. لأي استفسار أو شكوى، يرجى التواصل مع المالك عبر رقم هاتفه أو من خلال حسابه.`,
+        chessTitle: "لعبة الشطرنج - حرب الذكاء والمنطق (03/09/2026)",
+        chessDescription: `تم العمل على مشروع Chess Game بشكل مستمر لمدة ثلاثة أسابيع. تحتوي اللعبة على عدة مستويات من الصعوبة، ومؤثرات صوتية، وموسيقى، بالإضافة إلى العديد من اللمسات الخاصة التي أضفتها لجعل تجربة اللعب مميزة. صممت اللعبة لتجمع بين الذكاء والمنطق والتحدي والمتعة. لكن انتبه: هزيمة الـ Hard AI ليست مهمة سهلة أبدًا! فهل ستكون اللاعب الذي سيتمكن أخيرًا من هزيمته؟`,
+        options: "الخيارات",
+        return: "العودة إلى الصفحة الرئيسية",
+        modalTitle: "الخيارات",
+        soundMuted: "الصوت : مكتوم",
+        soundNotMuted: "الصوت : غير مكتوم",
+        languages: "اللغات",
+        close: "إغلاق",
+        prev: "السابق",
+        next: "التالي"
+    }
 
-ru: {
-    title: "Сервис книг по программированию - Скоро открытие (29/07/2026)",
-    description: `Хорошие новости! Сервис по продаже книг по программированию начнет работать и станет доступен онлайн с первого месяца сентября 2026 года. Эти книги были созданы с большой любовью и усилиями, но их цены остаются очень доступными, несмотря на рост стоимости основных ресурсов для этого проекта. Теперь будут представлены восемь книг по программированию, а доставка будет доступна по всей территории Ливана. По всем вопросам или жалобам, пожалуйста, свяжитесь с владельцем по его номеру телефона или через его аккаунт.`,
-    options: "Настройки",
-    return: "Вернуться на главную страницу",
-    modalTitle: "Настройки",
-    soundMuted: "Звук : Выключен",
-    soundNotMuted: "Звук : Включен",
-    languages: "Языки",
-    close: "Закрыть" ,
-    prev: "Назад",
-    next: "Далее"
-},
-ar: {
-    title: "خدمات كتب البرمجة - الافتتاح قريبًا (29/07/2026)",
-    description: `خبر جديد! ستبدأ خدمة بيع كتب البرمجة وستصبح متاحة عبر الإنترنت اعتبارًا من الشهر الأول من سبتمبر 2026. لقد تم إعداد هذه الكتب بكل حب وجهد، ومع ذلك فإن أسعارها مناسبة جدًا، خاصة بعد ارتفاع تكلفة الموارد الأساسية اللازمة لهذا العمل. سيتم الآن عرض ثمانية كتب برمجية، كما ستتوفر خدمة التوصيل إلى جميع الأراضي اللبنانية. لأي استفسار أو شكوى، يرجى التواصل مع المالك عبر رقم هاتفه أو من خلال حسابه.`,
-    options: "الخيارات",
-    return: "العودة إلى الصفحة الرئيسية",
-    modalTitle: "الخيارات",
-    soundMuted: "الصوت : مكتوم",
-    soundNotMuted: "الصوت : غير مكتوم",
-    languages: "اللغات",
-    close: "إغلاق" ,
-    prev: "السابق",
-    next: "التالي"
-}
 };
-
         const prevBtn = document.getElementById("prevBtn");
         const nextBtn = document.getElementById("nextBtn");
         const title = document.querySelector("h1");
@@ -199,6 +220,8 @@ ar: {
         document.getElementById("closeOptionsBtn").textContent = t.close;
         prevBtn.textContent = t.prev;
         nextBtn.textContent = t.next;
+        document.getElementById("chess-news-title").textContent = t.chessTitle;
+        document.getElementById("chess-news-description").textContent = t.chessDescription;
         if(muted) {
             soundBtn.textContent = t.soundMuted;
             soundBtn.classList.add("muted");
