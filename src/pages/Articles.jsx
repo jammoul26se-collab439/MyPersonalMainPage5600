@@ -64,6 +64,7 @@ function Articles({ language }) {
             target="_blank"
             rel="noopener noreferrer"
             className="game-button"
+            style = { {textDecoration : "none"} }
           >
             {text.install}
           </a>
