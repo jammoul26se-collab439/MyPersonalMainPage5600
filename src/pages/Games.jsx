@@ -21,7 +21,11 @@ function Games({language , playMusic , stopMusic}) {
 `A game that combines tactics, brainpower, and strategic planning. It features three difficulty levels, a "Makhlouta" mode, and 1v1 gameplay. I've also added my own touches, including new sounds and custom rules in a special game mode.
 The AI plays against you according to the difficulty level you choose at the beginning of the game, while a timer limits the time available for each player's turn depending on the selected difficulty.
 This is the third web game I've created. Is the idea old? Yes. But with some special touches? Awesome!`,
-chessButton: "Play Chess Game" 
+chessButton: "Play Chess Game" ,
+     javadTitle: "Javad Adventure",
+javadDescription:
+`My first application game! It features seven levels, challenging boss battles, and robot soldiers. Explore different stages, face enemies, and overcome challenges throughout your adventure. The game still has a few minor graphical glitches, but it represents an important step in my game development journey.`,
+javadButton: "Play Javad Adventure"
     },
 
 fr: {
@@ -41,7 +45,11 @@ chessDescription:
 `Un jeu qui combine la stratégie, la réflexion et la planification. Il propose trois niveaux de difficulté, un mode "Makhlouta" et des parties en 1 contre 1. J'y ai également ajouté mes propres touches, notamment de nouveaux sons et des règles personnalisées dans un mode de jeu spécial.
 L'intelligence artificielle joue contre vous selon le niveau de difficulté que vous choisissez au début de la partie, tandis qu'un chronomètre limite le temps disponible pour le tour de chaque joueur en fonction du niveau sélectionné.
 Il s'agit du troisième jeu web que j'ai créé. L'idée est-elle ancienne ? Oui. Mais avec quelques touches spéciales ? Génial !`,
-chessButton: "Jouer aux échecs"
+chessButton: "Jouer aux échecs" ,
+javadTitle: "Javad Adventure",
+javadDescription:
+`Mon premier jeu développé sous forme d'application ! Il comprend sept niveaux, des combats de boss difficiles et des soldats robots. Explorez différentes étapes, affrontez des ennemis et relevez de nombreux défis tout au long de votre aventure. Le jeu présente encore quelques petits problèmes graphiques, mais il représente une étape importante dans mon parcours de développement de jeux.`,
+javadButton: "Jouer à Javad Adventure"
 },
 
 es: {
@@ -61,7 +69,11 @@ chessDescription:
 `Un juego que combina táctica, inteligencia y planificación estratégica. Cuenta con tres niveles de dificultad, un modo "Makhlouta" y partidas 1 contra 1. También he añadido mis propios toques, incluyendo nuevos sonidos y reglas personalizadas en un modo de juego especial.
 La inteligencia artificial juega contra ti según el nivel de dificultad que elijas al comienzo de la partida, mientras que un temporizador limita el tiempo disponible para el turno de cada jugador según el nivel seleccionado.
 Este es el tercer juego web que he creado. ¿La idea es antigua? Sí. Pero con algunos toques especiales, ¿genial? ¡Por supuesto!`,
-chessButton: "Jugar al Ajedrez"
+chessButton: "Jugar al Ajedrez" ,
+javadTitle: "Javad Adventure",
+javadDescription:
+`¡Mi primer juego desarrollado como aplicación! Cuenta con siete niveles, desafiantes batallas contra jefes y soldados robots. Explora diferentes etapas, enfréntate a enemigos y supera diversos desafíos durante tu aventura. El juego todavía tiene algunos pequeños errores gráficos, pero representa un paso importante en mi camino como desarrollador de videojuegos.`,
+javadButton: "Jugar Javad Adventure"
 },
 
 ru: {
@@ -81,7 +93,11 @@ ru: {
 `Игра, сочетающая тактику, логику и стратегическое планирование. В ней доступны три уровня сложности, режим "Makhlouta" и игра один на один. Я также добавил свои собственные особенности, включая новые звуки и специальные правила в отдельном игровом режиме.
 Искусственный интеллект играет против вас в соответствии с выбранным в начале игры уровнем сложности, а таймер ограничивает время хода каждого игрока в зависимости от выбранного уровня.
 Это третья веб-игра, которую я создал. Идея старая? Да. Но с некоторыми особенными деталями? Отлично!`,
-chessButton: "Играть в шахматы"
+chessButton: "Играть в шахматы" ,
+   javadTitle: "Javad Adventure",
+javadDescription:
+`¡Mi primer juego desarrollado como aplicación! Cuenta con siete niveles, desafiantes batallas contra jefes y soldados robots. Explora diferentes etapas, enfréntate a enemigos y supera diversos desafíos durante tu aventura. El juego todavía tiene algunos pequeños errores gráficos, pero representa un paso importante en mi camino como desarrollador de videojuegos.`,
+javadButton: "Jugar Javad Adventure"
 },
 
 ar: {
@@ -101,7 +117,11 @@ chessDescription:
 `لعبة تجمع بين التكتيك، والتفكير، والتخطيط الاستراتيجي. تتضمن ثلاثة مستويات من الصعوبة، ونمط "مخلوطة"، بالإضافة إلى اللعب واحد ضد واحد. كما أضفت إليها لمساتي الخاصة، بما في ذلك أصوات جديدة وقواعد مخصصة في نمط لعب خاص.
 يلعب الذكاء الاصطناعي ضدك وفقًا لمستوى الصعوبة الذي تختاره في بداية اللعبة، بينما يحدد المؤقت الوقت المتاح لدور كل لاعب بحسب مستوى الصعوبة المختار.
 هذه هي ثالث لعبة ويب أقوم بإنشائها. هل الفكرة قديمة؟ نعم. ولكن مع بعض اللمسات الخاصة؟ رائع!`,
-chessButton: "العب الشطرنج"
+chessButton: "العب الشطرنج" ,
+javadTitle: "Javad Adventure",
+javadDescription:
+`أول لعبة قمت بتطويرها كتطبيق! تتضمن سبعة مستويات، ومعارك ضد زعماء أقوياء، وجنودًا من الروبوتات. استكشف المراحل المختلفة، وواجه الأعداء، وتغلب على التحديات خلال مغامرتك. لا تزال اللعبة تحتوي على بعض الأخطاء الرسومية البسيطة، لكنها تمثل خطوة مهمة في رحلتي في تطوير الألعاب.`,
+javadButton: "العب Javad Adventure"
 }  
 
 };
@@ -125,13 +145,28 @@ return (
                 </div>
             </>
         )}
-        {page === 2 && (
-            <div className="game-card">
-                <h2 className="game-title">{gamesText[language].chessTitle}</h2>
-                <p className="game-description">{gamesText[language].chessDescription}</p>
-                <a href="https://chess94393byjavad.jammoul26se.workers.dev" target="_blank" rel="noopener noreferrer"><button className="game-button" onClick={() => { stopMusic(); playClick(); }}>{gamesText[language].chessButton}</button></a>
-            </div>
-        )}
+       {page === 2 && (
+    <>
+        <div className="game-card">
+            <h2 className="game-title">{gamesText[language].chessTitle}</h2>
+            <p className="game-description">{gamesText[language].chessDescription}</p>
+            <a href="https://chess94393byjavad.jammoul26se.workers.dev" target="_blank" rel="noopener noreferrer">
+                <button className="game-button" onClick={() => { stopMusic(); playClick(); }}>
+                    {gamesText[language].chessButton}
+                </button>
+            </a>
+        </div>
+        <div className="game-card">
+            <h2 className="game-title">{gamesText[language].javadTitle}</h2>
+            <p className="game-description">{gamesText[language].javadDescription}</p>
+            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                <button className="game-button" onClick={() => { stopMusic(); playClick(); }}>
+                    {gamesText[language].javadButton}
+                </button>
+            </a>
+        </div>
+    </>
+)}
         <div className="games-navigation">
             <button className="page-button" disabled={page === 1} onClick={() => { playMusic(); playClick(); setPage(1);} }> {gamesText[language].prev} </button>
             <button className="page-button" disabled={page === 2} onClick={() => { playMusic(); playClick(); setPage(2);} }> {gamesText[language].next}</button>
