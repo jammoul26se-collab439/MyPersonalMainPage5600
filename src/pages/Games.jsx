@@ -46,7 +46,7 @@ chessDescription:
 L'intelligence artificielle joue contre vous selon le niveau de difficulté que vous choisissez au début de la partie, tandis qu'un chronomètre limite le temps disponible pour le tour de chaque joueur en fonction du niveau sélectionné.
 Il s'agit du troisième jeu web que j'ai créé. L'idée est-elle ancienne ? Oui. Mais avec quelques touches spéciales ? Génial !`,
 chessButton: "Jouer aux échecs" ,
-javadTitle: "Javad Adventure",
+javadTitle: "L'adventure de Javad",
 javadDescription:
 `Mon premier jeu développé sous forme d'application ! Il comprend sept niveaux, des combats de boss difficiles et des soldats robots. Explorez différentes étapes, affrontez des ennemis et relevez de nombreux défis tout au long de votre aventure. Le jeu présente encore quelques petits problèmes graphiques, mais il représente une étape importante dans mon parcours de développement de jeux.`,
 javadButton: "Jouer à Javad Adventure"
@@ -70,7 +70,7 @@ chessDescription:
 La inteligencia artificial juega contra ti según el nivel de dificultad que elijas al comienzo de la partida, mientras que un temporizador limita el tiempo disponible para el turno de cada jugador según el nivel seleccionado.
 Este es el tercer juego web que he creado. ¿La idea es antigua? Sí. Pero con algunos toques especiales, ¿genial? ¡Por supuesto!`,
 chessButton: "Jugar al Ajedrez" ,
-javadTitle: "Javad Adventure",
+javadTitle: "La Aventura de Javad",
 javadDescription:
 `¡Mi primer juego desarrollado como aplicación! Cuenta con siete niveles, desafiantes batallas contra jefes y soldados robots. Explora diferentes etapas, enfréntate a enemigos y supera diversos desafíos durante tu aventura. El juego todavía tiene algunos pequeños errores gráficos, pero representa un paso importante en mi camino como desarrollador de videojuegos.`,
 javadButton: "Jugar Javad Adventure"
@@ -94,7 +94,7 @@ ru: {
 Искусственный интеллект играет против вас в соответствии с выбранным в начале игры уровнем сложности, а таймер ограничивает время хода каждого игрока в зависимости от выбранного уровня.
 Это третья веб-игра, которую я создал. Идея старая? Да. Но с некоторыми особенными деталями? Отлично!`,
 chessButton: "Играть в шахматы" ,
-   javadTitle: "Javad Adventure",
+javadTitle: "Приключение Джавада" ,
 javadDescription:
 `¡Mi primer juego desarrollado como aplicación! Cuenta con siete niveles, desafiantes batallas contra jefes y soldados robots. Explora diferentes etapas, enfréntate a enemigos y supera diversos desafíos durante tu aventura. El juego todavía tiene algunos pequeños errores gráficos, pero representa un paso importante en mi camino como desarrollador de videojuegos.`,
 javadButton: "Jugar Javad Adventure"
@@ -118,7 +118,7 @@ chessDescription:
 يلعب الذكاء الاصطناعي ضدك وفقًا لمستوى الصعوبة الذي تختاره في بداية اللعبة، بينما يحدد المؤقت الوقت المتاح لدور كل لاعب بحسب مستوى الصعوبة المختار.
 هذه هي ثالث لعبة ويب أقوم بإنشائها. هل الفكرة قديمة؟ نعم. ولكن مع بعض اللمسات الخاصة؟ رائع!`,
 chessButton: "العب الشطرنج" ,
-javadTitle: "Javad Adventure",
+javadTitle: "مغامرات جواد",
 javadDescription:
 `أول لعبة قمت بتطويرها كتطبيق! تتضمن سبعة مستويات، ومعارك ضد زعماء أقوياء، وجنودًا من الروبوتات. استكشف المراحل المختلفة، وواجه الأعداء، وتغلب على التحديات خلال مغامرتك. لا تزال اللعبة تحتوي على بعض الأخطاء الرسومية البسيطة، لكنها تمثل خطوة مهمة في رحلتي في تطوير الألعاب.`,
 javadButton: "العب Javad Adventure"
