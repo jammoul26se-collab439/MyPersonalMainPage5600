@@ -53,18 +53,18 @@ function Navbar({ muted , setMuted , language , setLanguage , playMusic}) {
 };
     const navText = {
     en: {
-        home: "Home", games: "Games", books: "Business", articles: "Articles" , news: "News"
+        home: "Home", games: "Games", books: "Business", articles: "Others" , news: "News"
     },
     fr: {
-        home: "Accueil", games: "Jeux", books: "Entreprise", articles: "Articles" , news: "Actualités"
+        home: "Accueil", games: "Jeux", books: "Entreprise", articles: "Autres" , news: "Actualités"
     },
     es: {
-        home: "Inicio", games: "Juegos", books: "Negocio", articles: "Artículos" , news: "Noticias"
+        home: "Inicio", games: "Juegos", books: "Negocio", articles: "Otors" , news: "Noticias"
     },
-    ru: { home: "Главная", games: "Игры", books: "Бизнес", articles: "Статьи" , news: "Новости"
+    ru: { home: "Главная", games: "Игры", books: "Бизнес", articles: "Другое " , news: "Новости"
     },
     ar: {
-        home: "الرئيسية", games: "الألعاب", books: "الأعمال", articles: "المقالات" , news: "الأخبار"
+        home: "الرئيسية", games: "الألعاب", books: "الأعمال", articles: " أخرى " , news: "الأخبار"
     }
 };
 const sendAnonymousMessage = async () => {
